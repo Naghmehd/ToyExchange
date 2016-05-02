@@ -19,7 +19,7 @@ class ToysController < ApplicationController
   end
 
   def update
-    if current_user == @user || current_user.admin == true
+    if current_user == @user 
       save_for_html_json(@toy, "edit") { root_path }
     else
       redirect_to root_path

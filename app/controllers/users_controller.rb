@@ -15,27 +15,20 @@ class UsersController < ApplicationController
   end
 
   def edit
-    if current_user != @user && !current_user.admin?
-      flash[:danger] = "You cannot access another user's edit page!"
-      redirect_to root_path
-    end
+
   end
 
   def update
-    @user.assign_attributes(user_params)
-    if current_user == @user || current_user.admin == true
+    @user.user(user_params)
+    if current_user == @user
       save_for_html_json(@user, "edit") { root_path }
     else
       redirect_to root_path
-    end
+
   end
 
   def destroy
     destroy_html_json(@user, users_path)
-  end
-
-  def admin_dashboard
-    @user = current_user
   end
 
 private
