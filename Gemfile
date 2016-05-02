@@ -26,6 +26,7 @@ gem 'react-rails', '~> 1.7.0'
 gem "rails-erd"
 gem 'rails-footnotes', '~> 4.0'
 gem 'bootstrap_form'
+gem 'devise'
 
 
 # Use ActiveModel has_secure_password
