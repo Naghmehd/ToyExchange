@@ -22,6 +22,11 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'react-rails', '~> 1.7.0'
+gem "rails-erd"
+gem 'rails-footnotes', '~> 4.0'
+gem 'bootstrap_form'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -32,10 +37,19 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'dotenv-rails', require: 'dotenv/rails-now'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'pry-rails'
+  gem "codeclimate-test-reporter", require: nil
+  gem 'cucumber-rails', require: false
+  gem 'selenium-webdriver'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'quiet_assets'
+  gem "bullet"
 end
 
 group :development do
@@ -46,11 +60,17 @@ group :development do
   gem 'spring'
 end
 
-
+gem 'clearance'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'faker'
 gem 'kaminari'
 gem 'bcrypt'
+
+#Gems for image uploads
+gem "refile", require: "refile/rails"
+gem "refile-mini_magick"
+gem 'refile-postgres'
+
 group :production do
   gem 'puma'
   gem 'rails_12factor'
