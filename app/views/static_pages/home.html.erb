@@ -1,67 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>ToyExchange</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-  <nav class='navbar navbar-default navbar-fixed-top'>
-    <div class="container-fluid">
-      <% if signed_in? %>
-        <%= link_to "Logout, #{current_user.username}", cancel_user_registration_path, class: 'btn btn-md btn-warning box-shadow--8dp' %>
-      <% else %>
-      <%= link_to "ToyExchange", 'static_pages#home', class: "navbar" %>
-      <% end %>
-        <% if signed_in? %>
-          <div class='pull-right row'>
-            <a class= "nav-link lower-me pull-left col-xs-2" href='/'>Home</a>
-            <% end %>
-            <% if signed_in? %>
-            <div class='nav navbar-nav navbar row pull-right'>
-              <div class='row'>
-                <div class= "col-xs-3"> <%= link_to "How To", users_path, class: "nav-link" %> </div>
-                <div class= "col-xs-5"> <%= link_to 'Log out', cancel_user_registration_path, method: :delete, class: "nav-link" %> </div>
-                <div class='col-xs-3 nav-search'>Search</div>
-              </div>
-            </div>
-          </div>
-          <% else %>
-              <div class='nav navbar-nav navbar row pull-right'>
-                <div class= "col-xs-6"> <%= link_to "Log In", user_registration_path, class: "nav-link" %> </div>
-                <div class= "col-xs-6"> <%= link_to "Register", new_user_registration_path, class: "nav-link" %> </div>
-          <% end %>
-              </div>
-        </div>
-    </nav>
-
-
-<!-- <p class="notice"><%= notice %></p> -->
-<% flash.each do |key, value| %>
-    <div class="notice noticet-<%= key %> notice-dismissable">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-        <%= value %>
-    </div>
-<% end %>
-
-<% flash.each do |key, value| %>
-    <div class="alert alert-<%= key %> alert-dismissable">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-        <%= value %>
-    </div>
-<% end %>
-
-<% if current_user %>
-    <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-<% else %>
-    <%= link_to 'Login', new_user_session_path %>
-<% end %>
-
-
-
-<%= yield %>
-
-</body>
-</html>
+<%= render partial: '/layouts/navbar' %>
+<h1>Hello world!</h1>
+<div>
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>

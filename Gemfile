@@ -27,6 +27,9 @@ gem "rails-erd"
 gem 'rails-footnotes', '~> 4.0'
 gem 'bootstrap_form'
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
 
 
 # Use ActiveModel has_secure_password

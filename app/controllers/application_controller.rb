@@ -12,8 +12,12 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :zip_code])
   end
 
-  def current_user
-    return unless session[:user_id]
-    @current_user ||= User.find(session[:user_id])
-  end
+  private
+
+def current_user
+  @current_user ||= User.find_by(id: session[:user_id])
+end
+
+helper_method :current_user
+
 end

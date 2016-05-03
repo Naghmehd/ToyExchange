@@ -13,3 +13,46 @@
  *= require_tree .
  *= require_self
  */
+
+ /*
+  *= require rails_bootstrap_forms
+  */
+
+$primary-color: #2e97e5;
+$secondry-color: #ea4949;
+$yellow: #ffc639;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Hind:300,600|Dosis:400);
+
+html {
+  position: relative;
+}
+
+h1, h2, h3, h4, h5, h6, .btn, .btn-default {
+  font-family: Hind, sans-serif;
+}
+
+body {
+  font-family: Dosis, sans-serif;
+}
+
+.better-row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: $primary-color;
+}
+
+#fall_footnotes {
+  background-color: $primary-color;
+  color: white;
+
+}

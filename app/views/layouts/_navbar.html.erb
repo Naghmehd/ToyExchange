@@ -1,0 +1,21 @@
+<nav class='navbar navbar-default navbar-fixed-top'>
+  <div class="container-fluid">
+    <div class="navbar-text pull-right">
+      <% if signed_in? %>
+        Logged in as <strong><%= current_user.username %></strong>.
+        <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+      <% else %>
+        <%= link_to "Register", new_user_registration_path, :class => 'navbar-link'  %> |
+        <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+      <% end %>
+      <ul class="nav navbar-nav">
+        <% if Rails.env.development? %>
+          <li><%= link_to 'Facebook', '/users/sign_in' %></li>
+        <% else %>
+          <li><%= link_to 'Facebook', '/users/auth/facebook' %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
