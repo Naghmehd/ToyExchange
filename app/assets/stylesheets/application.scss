@@ -36,8 +36,17 @@ h1, h2, h3, h4, h5, h6, .btn, .btn-default {
 
 body {
   font-family: Dosis, sans-serif;
-  margin-top: 90px;
+  margin-top: 11em;
 }
+a {
+  color: white;
+}
+
+li {
+  display: inline;
+  float: left;
+}
+
 
 .navbar {
   background-color: $primary-color;
