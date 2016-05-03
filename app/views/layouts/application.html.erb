@@ -8,6 +8,31 @@
 </head>
 <body>
 
+
+
+<!-- <p class="notice"><%= notice %></p> -->
+<% flash.each do |key, value| %>
+    <div class="notice noticet-<%= key %> notice-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <%= value %>
+    </div>
+<% end %>
+
+<% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %> alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <%= value %>
+    </div>
+<% end %>
+
+<% if current_user %>
+    <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+<% else %>
+    <%= link_to 'Login', new_user_session_path %>
+<% end %>
+
+
+
 <%= yield %>
 
 </body>

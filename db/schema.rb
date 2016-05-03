@@ -38,8 +38,7 @@ ActiveRecord::Schema.define(version: 20160502190719) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "email",                               null: false
-    t.string   "first_name"
-    t.string   "last_name"
+    t.string   "username"
     t.integer  "zip_code"
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
