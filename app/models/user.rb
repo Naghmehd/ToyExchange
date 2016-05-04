@@ -8,7 +8,11 @@ class User < ActiveRecord::Base
          :omniauthable, :omniauth_providers => [:facebook]
 
   has_many :toys
-  has_many :conversation, through: :toys
+  has_many :conversation, :through => :toys
+
+  has_many :wishes
+  has_many :wants, :through => :wishes, :source => :toy
+
 
   def self.from_omniauth(auth_hash)
     user = find_or_create_by(uid: auth_hash['uid'], provider: auth_hash['provider'])

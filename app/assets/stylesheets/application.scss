@@ -50,7 +50,6 @@ li {
   float: left;
 }
 
-
 .navbar {
   background-color: $primary-color;
   border-bottom: 5px solid $secondary-color;
@@ -85,6 +84,17 @@ li {
 
 .navbar-default .navbar-link {
     color: white;
+}
+
+.notice.notice-notice.notice-dismissable {
+  background-color: #efefef;
+  margin-bottom: 2em;
+}
+
+a {
+  .dropdown-toggle {
+    color: #c3c3c3;
+  }
 }
 
 .pluginButton {
