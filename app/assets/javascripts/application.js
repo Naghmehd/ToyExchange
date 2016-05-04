@@ -17,6 +17,11 @@
 //= require react
 //= require react_ujs
 //= require components
+//= require bootstrap/alert
+//= require bootstrap/button
+//= require bootstrap/dropdown
+//= require bootstrap/modal
+//= require bootstrap/transition
 //= require_tree .
 
 $(document).ready(function () {

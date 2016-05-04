@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
   <link href='https://fonts.googleapis.com/css?family=Hind:600,300' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
     <script>
       window.fbAsyncInit = function() {
@@ -44,9 +45,8 @@
       <% end %> -->
 
       <%= yield %>
-      <%= render partial: '/layouts/footer' %>
 
-  <%
+      <%= render partial: '/layouts/footer' %>
 
   </body>
 </html>
