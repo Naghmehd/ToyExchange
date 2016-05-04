@@ -36,18 +36,17 @@
           </div>
       <% end %>
 
-      <% flash.each do |key, value| %>
+      <!-- <% flash.each do |key, value| %>
           <div class="alert alert-<%= key %> alert-dismissable">
               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
               <%= value %>
           </div>
-      <% end %>
+      <% end %> -->
 
       <%= yield %>
-    </div>
-    <footer>
-      <div id="footnotes_holder"></div>
-    </foorter>
+      <%= render partial: '/layouts/footer' %>
+
+  <%
 
   </body>
 </html>
