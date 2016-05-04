@@ -28,6 +28,7 @@ $yellow: #FFC639;
 
 html {
   position: relative;
+  height: 100%
 }
 
 h1, h2, h3, h4, h5, h6, .btn, .btn-default {
@@ -37,6 +38,7 @@ h1, h2, h3, h4, h5, h6, .btn, .btn-default {
 body {
   font-family: Dosis, sans-serif;
   margin-top: 11em;
+  height: 100%
 }
 a {
   color: white;
@@ -90,15 +92,24 @@ li {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  background-color: $primary-color;
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+    background-color: $primary-color;
 }
 
 #fall_footnotes {
   background-color: $primary-color;
   color: white;
+}
 
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+#footer {
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 }
