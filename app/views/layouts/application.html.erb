@@ -8,46 +8,47 @@
   <link href='https://fonts.googleapis.com/css?family=Hind:600,300' rel='stylesheet' type='text/css'>
 </head>
 
-<body>
-  <div id="wrapper">
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '1540518969588959',
-          xfbml      : true,
-          version    : 'v2.6'
-        });
-      };
+  <body>
+    <div id="wrapper">
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '1540518969588959',
+            xfbml      : true,
+            version    : 'v2.6'
+          });
+        };
 
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/sdk.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <div class="container">
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "//connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+      </script>
+        <div class="container">
 
-      <%= render partial: '/layouts/navbar' %>
+        <%= render partial: '/layouts/navbar' %>
 
-      <% flash.each do |key, value| %>
-          <div class="notice notice-<%= key %> notice-dismissable">
-              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-              <%= value %>
-          </div>
-      <% end %>
+        <% flash.each do |key, value| %>
+            <div class="notice notice-<%= key %> notice-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <%= value %>
+            </div>
+        <% end %>
 
-      <!-- <% flash.each do |key, value| %>
-          <div class="alert alert-<%= key %> alert-dismissable">
-              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-              <%= value %>
-          </div>
-      <% end %> -->
+        <!-- <% flash.each do |key, value| %>
+            <div class="alert alert-<%= key %> alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <%= value %>
+            </div>
+        <% end %> -->
 
-      <%= yield %>
+        <%= yield %>
 
-      <%= render partial: '/layouts/footer' %>
+      </div>
+        <%= render partial: '/layouts/footer' %>
     </div>
   </body>
 </html>
