@@ -59,15 +59,3 @@ Toy.create!(brand: 'Whisper Phone', category: 'Baby Toy', condition: 'Like New',
 Toy.create!(brand: 'Workman', category: 'Art & Craft', condition: 'Fair Condition', description: 'xxxxxxxxxxxx', name:'MMM', age_group: '11yr', picture_url: 'https://derpibooru.org/850623')
 Toy.create!(brand: 'iTikes', category: 'Activity & Learning', condition: 'Fair Condition', description: 'xxxxxxxxxxxx', name:'RRR', age_group: '0-1yr', picture_url: 'https://derpibooru.org/850623')
 Toy.create!(brand: 'Baby Einstein', category: 'Baby Toy', condition: 'Like New', description: 'xxxxxxxxxxxx', name:'ZZZ', age_group: '0-1yr', picture_url: 'https://derpibooru.org/850623')
-
-user.toys.each do |toy|
-    2.times do
-      list = List.create()
-    end
-  end
-
-user.toys.each do |toys|
-  2.times do
-    wish =Wish.create()
-  end
-end

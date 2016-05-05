@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   resources :users
   resources :toys
   resources :conversations
+  resources :companies
+  resources :wishes
+
+  resources "contacts", only: [:new, :create]
 
   get '/auth/:provider/callback', to: 'sessions#create'
 
