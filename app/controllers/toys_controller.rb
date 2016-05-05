@@ -19,11 +19,7 @@ class ToysController < ApplicationController
     end
 
     def update
-      if current_user == @user
-        save_for_html_json(@toy, "edit") { root_path }
-      else
-        redirect_to root_path
-      end
+  
     end
 
     def destroy
@@ -36,6 +32,6 @@ class ToysController < ApplicationController
     end
 
     def toy_params
-      params.require(:toy).permit(:name, :brand, :category, :description, :condition, :age_group, :picture_url)
+      params.require(:toy).permit(:name, :brand, :category, :description, :condition, :age_group, :picture_url, :profile_image)
     end
   end

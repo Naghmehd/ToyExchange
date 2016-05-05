@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-
+  attachment :profile_image
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
 
