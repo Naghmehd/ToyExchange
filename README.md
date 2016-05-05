@@ -1,28 +1,39 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to Toy Exchange, a platform for parents to list toys they no longer need and find toys they want in their local community at no cost.
 
-Things you may want to cover:
+-Toy Exchange is a website for parents who want to spend less on toys.
+-Users can create an account, list the toys they no longer want and search for toys by category, brand, zip-code and age-group.
+-When they find a toy they like, they can communicate with the Toy Exchanger and arrange for a pick-up.
+-Check out the live site at www.tiy-toyexchange.herokuapp.com. Please use xy@abc.com and password to use the demo.
 
-* Ruby version
+== Libraries, software and other tools used
+-Ruby(2.2.1)
+-Rails(4.2.4)
+-Bootstrap for styling and javascript
+-Web hosting by Heroku
+-Refile for image upload
+-Cucumber for model testing
+-PostgreSQL Database
+-Sass
+-React for dynamic item search
+-Bcrypt for password encryption
+-Geocoder for distance measurement
 
-* System dependencies
+More information in the Gemfile
 
-* Configuration
+== Installation Steps
+Fork this Repo
+Clone this Repo
+Run bundle install
+Run rake db:create
+rails s to start server
 
-* Database creation
+== More information
+-original UMLs
 
-* Database initialization
+-current Trello scrum board
+-wireframes
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+== Credits and Acknowledgements
+-

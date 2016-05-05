@@ -3,6 +3,6 @@ class Toy < ActiveRecord::Base
   has_and_belongs_to_many :users,
 
   has_many :wishes
-  has_many :wants, thought: :wishes, source: :toy
+  has_many :wants, through: :wishes, source: :toy
 
 end
