@@ -8,10 +8,10 @@ class User < ActiveRecord::Base
          :omniauthable, :omniauth_providers => [:facebook]
 
   has_many :toys
-  has_many :conversation, :through => :toys
+  has_many :conversation, through: :toys
 
   has_many :wishes
-  has_many :wants, :through => :wishes, :source => :toy
+  has_many :wants, through: :wishes, source: :toy
 
 
   def self.from_omniauth(auth_hash)
