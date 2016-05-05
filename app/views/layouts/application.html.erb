@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <div id="wrapper">
     <script>
       window.fbAsyncInit = function() {
         FB.init({
@@ -47,6 +48,6 @@
       <%= yield %>
 
       <%= render partial: '/layouts/footer' %>
-
+    </div>
   </body>
 </html>
