@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
 
+
+
   resources :users
   resources :toys
   resources :conversations
@@ -11,9 +13,9 @@ Rails.application.routes.draw do
 
   get '/auth/:provider/callback', to: 'sessions#create'
 
-
   authenticated do
-   root :to => 'user#show', as: :authenticated
-  end
- root :to => 'static_pages#home'
+     root :to => 'users#show', as: :authenticated
+   end
+   root :to => 'static_pages#home'
+
 end
