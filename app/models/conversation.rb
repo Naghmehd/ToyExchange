@@ -1,5 +1,6 @@
 class Conversation < ActiveRecord::Base
-  belong_to :users, through: :toys
+  belongs_to :toy
+  belongs_to :user
 
   def created_time
     "#{created_at.strftime('%r')} on #{created_at.strftime('%x')}"

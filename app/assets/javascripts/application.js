@@ -26,9 +26,14 @@
 
 $(document).ready(function () {
   $('.dropdown-toggle').dropdown(); {
-    $("Select").searchable();
+    $("Select").searchable({
+      condition: ,
+      age_group: ,
+      category: ,
+    });
   };
 });
+
 
 // $('#myModal').on('shown.bs.modal', function () {
 //   $('#myInput').focus()

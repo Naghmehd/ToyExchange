@@ -18,14 +18,6 @@
         </div>
         <div class="col-sm-6">
           <h2>Register</h2>
-            <ul class="pluginButton ">
-              <% if Rails.env.development? %>
-                <li><%= link_to 'Facebook', '/users/sign_in' %></li>
-              <% else %>
-                <li><%= link_to 'Facebook', '/users/auth/facebook' %></li>
-              <% end %>
-            </ul>
-
           <%= simple_form_for(resource, as: resource_name, url: new_user_session_path) do |f| %>
             <%= f.error_notification %>
 

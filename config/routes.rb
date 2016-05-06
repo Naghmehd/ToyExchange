@@ -11,5 +11,9 @@ Rails.application.routes.draw do
 
   get '/auth/:provider/callback', to: 'sessions#create'
 
-  root 'static_pages#home'
+
+  # authenticated do
+  #  root :to => 'toy_path', as: :authenticated
+  # end
+ root :to => 'static_pages#home'
 end

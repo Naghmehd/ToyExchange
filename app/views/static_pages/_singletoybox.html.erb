@@ -5,10 +5,16 @@
       </div>
     </div>
     <div class="col-xs-4">
-      <p>This is a toy that is used lightly.</p>
+      <%= @toy.description %>
     </div>
     <div class="col-xs-4">
-      <%= link_to  "Update", edit_toy_path, class:'btn btn-default' %>
+      <% if current_user.toys.any? %>
+        <% current_user.toys.each do |toy| %>
+          <%= link_to  "Update", edit_toy_path, class:'btn btn-default' %>
+        <% end %>
+      <% else %>
+        <%= link_to  "Message", new_conversation_path, class:'btn btn-default' %>
+      <% end %>
     </div>
   </div>
 </div>

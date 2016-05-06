@@ -1,5 +1,39 @@
 
-  <div class="row">
-    <h1>Show page for toys</h1>
+<div class="row">
+  <h1><%= @toy.name %></h1>
+</div>
+<p id="notice"><%= notice %></p>
+<div class="row">
+<%= render partial: '/static_pages/singletoybox' %>
+</div>
+
+<div class="row">
+  <div class="col-xs-4">
+    <% %>
   </div>
-  <p id="notice"><%= notice %></p>
+  <div class="col-xs-8">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="row">
+
+        </div>
+        <div class="row">
+          <%= simple_form_for @conversation, toy_path do |f| %>
+          <div class='row'>
+            <div class='col-md-12'>
+              <%= f.label :body %>
+              <%= f.text_area :body, class: 'form-control' %>
+            </div>
+          </div>
+
+          <div class='row'>
+            <div class='col-md-12'>
+              <%= f.submit class: "btn btn-primary" %>
+            </div>
+          </div>
+        <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
