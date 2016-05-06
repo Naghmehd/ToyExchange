@@ -18,15 +18,6 @@
                   <li><%= link_to "Login ", new_user_session_path %></li>
               <% end %>
           </ul>
-          <div class="col-sm-4 col-md-4 pull-right">
-            <%= form_tag(toys_path, :method => "get", id: "search-form", html: {class: 'form-group'}) do %>
-            <%= text_field_tag :query, params[:query], size: 150, placeholder: "Search a Toy", class: "form-control"%>
-            <%= button_tag(type: "submit", class: "btn btn-default") do %>
-              <i class="glyphicon glyphicon-search"></i>
-            <% end %>
-            <%= submit_tag 'Search', class: 'btn btn-success' %>
-            <% end %>
-          </div>
 
         </nav>
       </div>
