@@ -1,6 +1,6 @@
 <h1> List your toys by filling the form</h1>
 
-<%= simple_form_for(resource, as: resource_name, url: new_toy_path(resource_name) do |f| %>
+<%= simple_form_for @toys do |f| %>
   <%= f.error_notification %>
   <div class="form-inputs">
     <%= f.input :category, required: true %>
@@ -8,8 +8,7 @@
     <%= f.input :age_group, required: true %>
     <%= f.input :condition, require: true %>
     <%= f.input :description, type: :text, require: true %>
-    <%= f.input :picture_url, type: :file, require: false%>
-    <%= form.attachment_field :profile_image %>
+    <%= f.attachment_field :profile_image %>
   </div>
   <div class="form-actions">
     <%= f.button :submit, "Submit" %>
