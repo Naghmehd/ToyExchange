@@ -8,12 +8,12 @@ class ConversationsController < ApplicationController
   end
 
   def create
-    @toy = Toy.find(toy_params)
+
     @conversation = Conversation.new(conversation_params)
 
     if @conversation.save
       flash[:notice] = "conversation created"
-      redirect_to @toy
+      redirect_to root_path
     else
       render :new
     end
@@ -29,7 +29,5 @@ class ConversationsController < ApplicationController
     params.require(:conversation).permit(:body, :user_id, :toy_id)
   end
 
-  def toy_params
-    params.require(:toy).permit(:toy_id, :name, :brand, :category, :description, :condition, :age_group, :picture_url, :profile_image)
-  end
+
 end

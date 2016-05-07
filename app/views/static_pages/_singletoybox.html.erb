@@ -8,7 +8,7 @@
       <%= @toy.description %>
     </div>
     <div class="col-xs-4">
-      <% if current_user.toys.any? %>
+      <% if current_user? %>
         <% current_user.toys.each do |toy| %>
           <%= link_to  "Update", edit_toy_path, class:'btn btn-default' %>
         <% end %>

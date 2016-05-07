@@ -1,1 +1,12 @@
-<h1>This the conversation box</h1>
+<h1>This the conversation show page</h1>
+<%= simple_form_for [@toy, Conversation.new] do |f| %>
+  <div class="field">
+    <%= f.hidden_field :toys_id, :value => @toy %>
+    <%= f.hidden_field :user_id, :value => current_user %>
+    <%= f.label :body %>
+    <%= f.text_field :body %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Send" %>
+  </div>
+<% end %>
