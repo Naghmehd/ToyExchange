@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 20160507023927) do
   end
 
   create_table "conversations", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "toy_id"
     t.text     "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

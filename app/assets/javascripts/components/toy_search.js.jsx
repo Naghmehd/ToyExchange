@@ -68,3 +68,4 @@ var ToySearch = React.createClass ({
         </section>
       );
     },
+})

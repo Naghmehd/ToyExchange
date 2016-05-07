@@ -18,7 +18,7 @@ User.create!(username: 'Shilpa', password: "password", password_confirmation: 'p
 User.create!(username: 'Zareen', password: "password", password_confirmation: 'password', zip_code:78702, email: 'fest@example.com')
 User.create!(username: 'Robert', password: "password", password_confirmation: 'password', zip_code:78707, email: 'xest@example.com')
 
-Toy.create!(brand: 'Baby Einstein', category: 'Baby Toy', condition: 'Like New', description: 'Faker::Lorem.sentence', name:'Rattle', age_group: '0-1 yr', picture_url: '')
+Toy.create!(brand: 'Baby Einstein', category: 'Baby Toy', condition: 'Like New', description: 'Faker::Lorem.sentence', name:'Rattle', age_group: '0-1 yr', picture_url: '/images/toy2.png')
 Toy.create!(brand: 'Barbie', category: 'Doll', condition: 'Like New', description: 'Faker::Lorem.sentence', name:'Barbie', age_group: '4-8yrs', picture_url: '')
 Toy.create!(brand: 'Bright starts', category: 'Activity & Learning', condition: 'Good Condition', description: 'Faker::Lorem.sentence', name:'Flash Card', age_group: '2-4yrs', picture_url: '')
 Toy.create!(brand: 'crayola', category: 'Art & Craft', condition: 'Good Condition', description: 'Faker::Lorem.sentence', name:'Paint Train', age_group: '2-4yrs', picture_url: '')
