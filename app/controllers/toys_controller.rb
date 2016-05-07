@@ -14,10 +14,10 @@ class ToysController < ApplicationController
 
     def create
       @toy = Toy.new(toy_params)
-      @toy.user = current_user
+      @user = current_user
 
       if @toy.save
-        redirect_to user_path
+        redirect_to user_path(@user)
       else
         render new_toy_path
       end

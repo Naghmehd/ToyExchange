@@ -39,38 +39,32 @@ var ToySearch = React.createClass ({
   render: function(){
     return (
       <section>
-        <div class="row">
-          <div class="col-xs-4">
-            <div class="row">
-              <div class="col-xs-12">
+        {this.state.filteredToys.map(function (toy) {
+            return (
+              <div class="col-xs-4">
                 <div class="row">
-                    {this.state.filteredToys.map(function (toy) {
-                        return (
-                          <div class="col-xs-12 toy-box">
-                            <img scr={toy.picture_url}></img>
-                          </div>
-                        );
-                    })}
-                </div>
-              </div>
-              <div class="row">
-                  {this.state.filteredToys.map(function (toy) {
-                      return (
-                        <div class="col-xs-12">
-                          <p> {toy.description}</p>
-                        </div>
-                      );
-                  })}
-                  <div class="row">
-                    <div class="col-xs-12">
-                      <a href="/conversations#new/">Send a Message</a>
+                  <div class="col-xs-12 toy-box">
+                    <img scr={toy.picture_url}></img>
+                  </div>
+                <div class="co-xs-12">
+                  <div class="col-xs-4 toy-box">
+                    <div class="col-xs-12 toy-box">
+                      <img scr={toy.picture_url}></img>
                     </div>
                   </div>
+                  <div class="col-xs-12">
+                    <p> {toy.description}</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <div class="col-xs-4">
+                    <a href="/conversations#new/">Send a Message</a>
+                    </div>
+                  </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    );
-  }
-});
+            );
+         })}
+        </section>
+      );
+    },
