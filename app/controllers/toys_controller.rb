@@ -1,4 +1,5 @@
 class ToysController < ApplicationController
+    attachment :profile_image
     def index
       @toys = Toy.all
     end

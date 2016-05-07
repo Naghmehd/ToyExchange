@@ -16,6 +16,6 @@ Rails.application.routes.draw do
   # authenticated do
   #    root :to => 'users#show', as: :authenticated
   #  end
-   root :to => 'static_pages#home'
+  root :to => 'static_pages#home'
 
 end
