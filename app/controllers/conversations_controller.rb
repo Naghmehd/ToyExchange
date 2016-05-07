@@ -8,12 +8,11 @@ class ConversationsController < ApplicationController
   end
 
   def create
-
     @conversation = Conversation.new(conversation_params)
 
     if @conversation.save
       flash[:notice] = "conversation created"
-      redirect_to root_path
+      redirect_to (:back)
     else
       render :new
     end

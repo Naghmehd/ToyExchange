@@ -1,5 +1,5 @@
 class ToysController < ApplicationController
-    
+
     def index
       @toys = Toy.all
     end
@@ -7,6 +7,7 @@ class ToysController < ApplicationController
     def show
       @toy = Toy.find(params[:id])
       @conversation = Conversation.new
+      # @toy_conversations = @toy.conversations
     end
 
     def new

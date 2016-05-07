@@ -1,14 +1,16 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-4 toy-box">
-      <div class="thumbnail">
-      </div>
+        <%= attachment_image_tag(@toy, :profile_image, :fill, 100, 100, fallback: "toy2.png", class:'toy-image') %>
+    </div>
+  </div>
     </div>
     <div class="col-xs-4">
+      <%= @toy.name %>
       <%= @toy.description %>
     </div>
     <div class="col-xs-4">
-      <% if current_user? %>
+      <% if current_user %>
         <% current_user.toys.each do |toy| %>
           <%= link_to  "Update", edit_toy_path, class:'btn btn-default' %>
         <% end %>
