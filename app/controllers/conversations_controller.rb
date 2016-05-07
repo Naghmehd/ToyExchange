@@ -4,13 +4,12 @@ class ConversationsController < ApplicationController
   end
 
   def new
-    # @toy = Toy.find(params.fetch[:toy_id])
-    @conversation = @toy.conversations.build
+    @conversation = Conversation.new
   end
 
   def create
     @toy = Toy.find(toy_params)
-    @conversation = @toy.conversations.build(conversation_params)
+    @conversation = Conversation.new(conversation_params)
 
     if @conversation.save
       flash[:notice] = "conversation created"
@@ -31,6 +30,6 @@ class ConversationsController < ApplicationController
   end
 
   def toy_params
-    params.require(:toy).permit(:name, :brand, :category, :description, :condition, :age_group, :picture_url, :profile_image)
+    params.require(:toy).permit(:toy_id, :name, :brand, :category, :description, :condition, :age_group, :picture_url, :profile_image)
   end
 end
