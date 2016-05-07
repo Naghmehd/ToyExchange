@@ -14,14 +14,14 @@ class ConversationsController < ApplicationController
   end
 
   def create
-    @conversation = Conversation.new(conversation_params)
-
-    if @conversation.save
-      flash[:notice] = "conversation created"
-      redirect_to (:back)
-    else
-      render :new
-    end
+    if Conversation.between(params[:sender_id],params[:recipient_id])
+   .present?
+    @conversation = Conversation.between(params[:sender_id],
+     params[:recipient_id]).first
+   else
+    @conversation = Conversation.create!(conversation_params)
+   end
+   redirect_to conversation_messages_path(@conversation)
   end
 
   private
@@ -31,7 +31,7 @@ class ConversationsController < ApplicationController
   end
 
   def conversation_params
-    params.require(:conversation).permit(:body, :user_id, :toy_id)
+    params.require(:conversation).permit(:body, :user_id, :toy_id,:sender_id, :recipient_id)
   end
 
 
