@@ -34,6 +34,7 @@ gem 'simple_form'
 gem 'mail_form'
 gem "refile", require: "refile/rails"
 gem "refile-mini_magick"
+gem 'refile-postgres'
 
 
 
