@@ -59,7 +59,3 @@ Toy.create!(brand: 'Whisper Phone', category: 'Baby Toy', condition: 'Like New',
 Toy.create!(brand: 'Workman', category: 'Art & Craft', condition: 'Fair Condition', description: 'Faker::Lorem.sentence', name:'MMM', age_group: '11yr', picture_url: '')
 Toy.create!(brand: 'iTikes', category: 'Activity & Learning', condition: 'Fair Condition', description: 'Faker::Lorem.sentence', name:'RRR', age_group: '0-1yr', picture_url: '')
 Toy.create!(brand: 'Baby Einstein', category: 'Baby Toy', condition: 'Like New', description: 'Faker::Lorem.sentence', name:'ZZZ', age_group: '0-1yr', picture_url: '')
-
-category      = ["Activity & Learning", "Art & Crafts", "Baby Toys", "Dolls", "Game"]
-condition     = ["Like New", "Good Condition", "Fair Condition"]
-age_group     = ["0-1yr", "1-2yrs","2-4yrs","4-8yrs"]
