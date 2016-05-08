@@ -74,6 +74,8 @@ CREATE TABLE conversations (
     toy_id integer,
     user_id integer,
     to_user_id integer,
+    sender_id integer,
+    recipient_id integer,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL
 );
@@ -434,6 +436,20 @@ ALTER TABLE ONLY users
 
 ALTER TABLE ONLY wishes
     ADD CONSTRAINT wishes_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: index_conversations_on_recipient_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_conversations_on_recipient_id ON conversations USING btree (recipient_id);
+
+
+--
+-- Name: index_conversations_on_sender_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_conversations_on_sender_id ON conversations USING btree (sender_id);
 
 
 --

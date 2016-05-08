@@ -6,4 +6,6 @@ class UsersController < ApplicationController
     @toys = @user.toys
     @wanted_toys = @user.wants
   end
+
+
 end
