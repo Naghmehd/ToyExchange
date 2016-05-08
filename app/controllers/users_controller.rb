@@ -7,5 +7,9 @@ class UsersController < ApplicationController
     @wanted_toys = @user.wants
   end
 
+  private
+    def get_toy
+      @toy = Toy.find(params.fetch(:id))
+    end
 
 end

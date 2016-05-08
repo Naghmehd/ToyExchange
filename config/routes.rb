@@ -3,9 +3,11 @@ Rails.application.routes.draw do
 
   get 'static_pages/home' => 'static_pages#home'
   resources :static_pages
+
   resources :users
-  resources :toys
-  
+    resources :toys
+
+
   resources :conversations do
     resources :messages
   end

@@ -14,15 +14,21 @@ class ToysController < ApplicationController
     end
 
     def create
-      @toy = Toy.new(toy_params)
+      @toy = current_user.toys.build(toy_params)
       @user = current_user
 
-      if @toy.save
-        redirect_to toy_path(@toy)
-      else
-        render new_toy_path
-      end
+        respond_to do |format|
+           if @toy.save
+             format.html { redirect_to user_path(@user), notice: 'Toy was successfully created.' }
+             format.js   { }
+             format.json { render :show, status: :created, location: @toy }
+           else
+             format.html { render :new_toy_path }
+             format.json { render json: @toy.errors, status: :unprocessable_entity}
+           end
+         end
     end
+
 
     def edit
       @toy = get_toy
@@ -49,9 +55,9 @@ class ToysController < ApplicationController
 
     def destroy
       @toy = get_toy
-
       if @toy.destroy
-        redirect_to toy_path
+
+        redirect_to :back
       else
         redirect_to :back
       end

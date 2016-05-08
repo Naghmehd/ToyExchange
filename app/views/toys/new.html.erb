@@ -3,11 +3,15 @@
 <%= simple_form_for @toys do |f| %>
   <%= f.error_notification %>
   <div class="form-inputs">
-    <%= f.input :category, required: true %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.label :category, required: true %>
+    <p><%=f.select :category,[['Activity & Learning','activity & learning'],['Arts & Crafts','arts & crafts'],['Baby Toys', 'baby toys'],['Dolls','dolls'],['Game', 'game']]%></p>
+    <%= f.label :condition, require: true %>
+    <p><%=f.select :condition,[['Like New','like new'],['Good Condition','good condition'],['Fair Condition', 'fair condition']]%></p>
+    <%= f.label :age_group, required: true %>
+    <p><%=f.select :age_group,[['0-1Yr','0-1yr'],['1-2Yrs','1-2yrs'],['2-4Yrs', '2-4yrs'],['4-8Yrs','4-8yrs']]%></p>
     <%= f.input :name, required: true %>
     <%= f.input :brand, autocomplete: "on", required: true %>
-    <%= f.input :age_group, required: true %>
-    <%= f.input :condition, require: true %>
     <%= f.input :description, type: :text, require: true %>
     <%= f.attachment_field :profile_image %>
   </div>
