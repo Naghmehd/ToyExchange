@@ -1,16 +1,5 @@
-<div class="row">
-  <div class="col-sm-8">
-    <%= form_tag(toys_path, :method => "get", id: "search-form", html: {class: 'form-group'}) do %>
-    <%= text_field_tag :query, params[:query], size: 150, placeholder: "Search a Toy", class: "form-control"%>
-    <%= button_tag(type: "submit", class: "btn btn-default") do %>
-      <i class="glyphicon glyphicon-search"></i>
-    <% end %>
-    <%= submit_tag 'Search', class: 'btn btn-success' %>
-    <% end %>
-  </div>
-</div>
 </br>
-</br>
+<!--This the face book like and share  -->
   <div
     class="fb-like"
     data-share="true"
@@ -25,29 +14,12 @@
   </div>
 </div>
 </br>
+<!-- This is the filter -->
 <div class="row">
   <%= render partial: '/static_pages/filterbar' %>
 </div>
-<!-- toy listing starts  -->
-<section>
-  <% @toys.each do |t| %>
-  <div class="col-xs-4">
-    <div class="row">
-      <div class="co-xs-12">
-        <div class="col-xs-4 toy-box">
-          <%= link_to toy_path(t.id) do %>
-          <%= attachment_image_tag(t, :profile_image, :fill, 100, 100, fallback: "toy2.png", class:'toy-image') %>
-          <% end %>
-        </div>
-        <div class="col-xs-4 small-box">
-          <p><%= t.name %></p>
-          <p><%= t.description %></p>
-          <div class="col-xs-4">
-            <%= link_to  "Send a Message", new_conversation_path, class:'btn btn-default' %>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <% end %>
-  </section>
+</br>
+</br>
+
+
+<%= react_component('ToySearch') %>

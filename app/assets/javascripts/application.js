@@ -13,10 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap-sprockets
 //= require react
 //= require react_ujs
 //= require components
+//= require bootstrap-sprockets
 //= require bootstrap/alert
 //= require bootstrap/button
 //= require bootstrap/dropdown
@@ -24,15 +24,15 @@
 //= require bootstrap/transition
 //= require_tree .
 
-$(document).ready(function () {
-  $('.dropdown-toggle').dropdown(); {
-    $("Select").searchable({
-      condition: ,
-      age_group: ,
-      category: ,
-    });
-  };
-});
+// $(document).ready(function () {
+//   $('.dropdown-toggle').dropdown(); {
+//     $("Select").searchable({
+//       condition: ,
+//       age_group: ,
+//       category: ,
+//     });
+//   };
+// });
 
 
 // $('#myModal').on('shown.bs.modal', function () {
