@@ -7,9 +7,11 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:facebook]
 
-         
+
   has_many :toys
   has_many :conversation, through: :toys
+  has_many :conversations, :foreign_key => :sender_id
+
 
   has_many :wishes
   has_many :wants, through: :wishes, source: :toy

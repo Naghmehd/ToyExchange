@@ -1,40 +1,30 @@
-<h1>Listing conversations</h1>
-
-  <p id="notice"><%= notice %></p>
-
-<%= react_component("Newconversation") %>
-
-
-<%= react_component('conversations', conversations: @conversations) %>
-
-<% @conversations.each do |conversation| %>
-  <% react_component('conversation', body: conversation.body) %>
-<% end %>
-
-
-
-
-<!-- <table class='table table-border table-hover'>
-  <thead>
-    <tr>
-      <th>Image url</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @conversations.each do |conversation| %>
-      <tr>
-        <td><%= conversation.body %></td>
-        <td><%= link_to 'Show', conversation %></td>
-        <td><%= link_to 'Edit', edit_conversation_path(conversation) %></td>
-        <td><%= link_to 'Destroy', conversation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<h1>User Inbox- index conversations</h1>
+<div class="t">
+ <h3>Mailbox</h3>
+ <div class="ist">
+  <div class="item">
+   <% @conversations.each do |conversation| %>
+   <% if conversation.sender_id == current_user.id ||      conversation.recipient_id == current_user.id %>
+    <% if conversation.sender_id == current_user.id %>
+      <% recipient = User.find(conversation.recipient_id) %>
+    <% else %>
+      <% recipient = User.find(conversation.sender_id) %>
     <% end %>
-  </tbody>
-</table> -->
-
-<br />
-
-<%= link_to 'New conversation', new_conversation_path %>
+    <%= link_to recipient.first_name,   conversation_messages_path(conversation)%>
+   <% end %>
+  <% end %>
+  </div>
+ </div>
+</div>
+<div class="">
+ <h3>All Users</h3>
+  <div class="list">
+   <% @users.each do |user| %>
+    <% if user.id != current_user.id %>
+     <div class="item">
+    <%= link_to 'Message me!', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post' %>
+ </div>
+  <% end %>
+ <% end %>
+ </div>
+</div>

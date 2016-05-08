@@ -6,6 +6,9 @@
               <li><%= link_to "Home", static_pages_home_path %></li>
               <li><%= link_to "How To", companies_path %></li>
               <% if signed_in? %>
+            
+                <li><%= link_to "Inbox", conversations_path %></li>
+
                 <li class="nav-dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     Account <b class="caret"></b>
