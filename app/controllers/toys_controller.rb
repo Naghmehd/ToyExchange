@@ -7,7 +7,6 @@ class ToysController < ApplicationController
     def show
       @toy = Toy.find(params[:id])
       @conversation = Conversation.new
-      # @toy_conversations = @toy.conversations
     end
 
     def new
@@ -19,7 +18,7 @@ class ToysController < ApplicationController
       @user = current_user
 
       if @toy.save
-        redirect_to user_path(@user)
+        redirect_to toy_path(@toy)
       else
         render new_toy_path
       end
@@ -33,7 +32,7 @@ class ToysController < ApplicationController
       @toy = get_toy
 
       if @toy.update(toy_params)
-        redirect_to @toys_path
+        redirect_to @toy_path
       else
         render :edit
       end
@@ -52,7 +51,7 @@ class ToysController < ApplicationController
       @toy = get_toy
 
       if @toy.destroy
-        redirect_to user_path
+        redirect_to toy_path
       else
         redirect_to :back
       end
@@ -60,10 +59,10 @@ class ToysController < ApplicationController
 
   private
     def get_toy
-      @user = User.find(params.fetch(:id))
+      @toy = Toy.find(params.fetch(:id))
     end
 
     def toy_params
       params.require(:toy).permit(:name, :brand, :category, :description, :condition, :age_group, :picture_url, :profile_image)
     end
-  end
+end
