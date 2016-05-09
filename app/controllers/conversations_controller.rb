@@ -19,7 +19,7 @@ class ConversationsController < ApplicationController
       @conversation = Conversation.create(conversation_params)
     end
 
-    redirect_to conversation_path(@conversation)
+    redirect_to conversation_path(@conversation.id)
   end
 
   private
