@@ -25,16 +25,13 @@
 //= require_tree .
 
 // $(document).ready(function () {
-//   $('.dropdown-toggle').dropdown(); {
-//     $("Select").searchable({
-//       condition: ,
-//       age_group: ,
-//       category: ,
-//     });
-//   };
+//   $('.dropdown-toggle').dropdown();
 // });
 
-
-// $('#myModal').on('shown.bs.modal', function () {
-//   $('#myInput').focus()
-// })
+$("select.filterby").change(function(){
+    var filters = $.map($("select.filterby").toArray(), function(e){
+        return $(e).val();
+    }).join(".");
+    $("div#FilterContainer").find("div").hide();
+    $("div#FilterContainer").find("div." + filters).show();
+});
