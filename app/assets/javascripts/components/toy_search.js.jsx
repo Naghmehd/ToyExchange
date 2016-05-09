@@ -48,15 +48,15 @@ var ToySearch = React.createClass ({
               <div className="col-xs-4">
                 <div className="row">
                   <div className="col-xs-12">
-                    <div className="col-xs-4 toy-box">
+                    <div className="col-xs-2 toy-box">
                       <img scr={toy.profile_image}></img>
                     </div>
                   </div>
-                  <div className="col-xs-4 small-box">
+                  <div className="col-xs-5 small-box">
                     <p>{toy.name}</p>
                     <p> {toy.description}</p>
-                    <div className="col-xs-4">
-                    <a href="/conversations/new/">Send a Message</a>
+                    <div className="col-xs-12">
+                    <a href="/conversations/new/">Start a Conversation</a>
                     </div>
                   </div>
                 </div>
