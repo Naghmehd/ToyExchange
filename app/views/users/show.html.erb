@@ -22,9 +22,11 @@
         <div class="toy-box">
         <img scr="<%= t.profile_image %>">
         </div>
+        <div class="text-box">
         <p><%= t.description %></p>
           <%= link_to 'Destroy', toy_path(t.id), method: :delete, data: { confirm: 'Are you sure?' } %>
         <% end %>
+        </div>
       </div>
   </div>
   <hr>

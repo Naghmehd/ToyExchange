@@ -1,26 +1,24 @@
-
-<div class="row">
-  <h1><%= @toy.name %></h1>
-</div>
 <p id="notice"><%= notice %></p>
-<div class="row">
-<%= render partial: '/static_pages/singletoybox' %>
-</div>
-<hr>
-<div class="row">
-  <%= simple_form_for @conversation do |f| %>
-  <div class='row'>
-    <div class='col-md-12'>
-      <%= f.label :body %>
-      <%= f.text_area :body, class: 'form-control' %>
+<div class="container">
+  <div class="row">
+    <h1><%= @toy.name %></h1>
+  </div>
+  <div class="row">
+    <div class="col-xs-4 toy-box">
+        <%= attachment_image_tag(@toy, :profile_image, :fill, 100, 100, fallback: "toy2.png", class:'toy-image') %>
     </div>
   </div>
-  <div class='row'>
-    <div class='col-md-12'>
-      <%= f.submit class: "btn btn-primary" %>
-    </div>
-  </div>
-  <% end %>
-</div>
 
-  
+    <div class="col-xs-4 ">
+      <%= @toy.description %>
+    </div>
+    <div class="col-xs-4">
+      <% if current_user.toys.where(id: @toy.id).count > 0  %>
+        <% current_user.toys.each do |toy| %>
+          <%= link_to  "Update", edit_toy_path, class:'btn btn-default' %>
+          <% end %>
+      <% else %>
+        <%= link_to  "Message", new_conversation_path, class:'btn btn-default' %>
+      <% end %>
+    </div>
+</div>
