@@ -3,3 +3,14 @@
 <% @messages.each do |message| %>
   <p><%= message.body %> from <%= message.user.username %></p>
 <% end %>
+<%= simple_form_for [@conversation, Message.new] do |f| %>
+  <div class="field">
+    <%= f.hidden_field :toys_id, :value => @toy %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.label :message %>
+    <%= f.text_area :body %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Send" %>
+  </div>
+<% end %>
