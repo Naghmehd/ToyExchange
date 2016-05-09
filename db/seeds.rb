@@ -7,16 +7,16 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-User.create!(username: 'Usha', password: "password", password_confirmation: 'password', zip_code:78701, email: 'sest@example.com')
+User.create!(username: 'Usha', password: "password", password_confirmation: 'password', zip_code:78701, email: 'uest@example.com')
 User.create!(username: 'Ajay', password: "password", password_confirmation: 'password', zip_code:78702, email: 'Aest@example.com')
-User.create!(username: 'Zach', password: "password", password_confirmation: 'password', zip_code:78703, email: 'best@example.com')
-User.create!(username: 'Sam', password: "password", password_confirmation: 'password', zip_code:78704,  email: 'cest@example.com')
-User.create!(username: 'Lily', password: "password", password_confirmation: 'password', zip_code:78701,  email: 'qest@example.com')
-User.create!(username: 'Cameron', password: "password", password_confirmation: 'password', zip_code:78705, email: 'pest@example.com')
-User.create!(username: 'Zeeshan', password: "password", password_confirmation: 'password', zip_code:78706, email: 'mest@example.com')
-User.create!(username: 'Shilpa', password: "password", password_confirmation: 'password', zip_code:78701, email: 'vest@example.com')
-User.create!(username: 'Zareen', password: "password", password_confirmation: 'password', zip_code:78702, email: 'fest@example.com')
-User.create!(username: 'Robert', password: "password", password_confirmation: 'password', zip_code:78707, email: 'xest@example.com')
+User.create!(username: 'Zach', password: "password", password_confirmation: 'password', zip_code:78703, email: 'zcest@example.com')
+User.create!(username: 'Sam', password: "password", password_confirmation: 'password', zip_code:78704,  email: 'sest@example.com')
+User.create!(username: 'Lily', password: "password", password_confirmation: 'password', zip_code:78701,  email: 'lest@example.com')
+User.create!(username: 'Cameron', password: "password", password_confirmation: 'password', zip_code:78705, email: 'cest@example.com')
+User.create!(username: 'Zeeshan', password: "password", password_confirmation: 'password', zip_code:78706, email: 'zeest@example.com')
+User.create!(username: 'Shilpa', password: "password", password_confirmation: 'password', zip_code:78701, email: 'shest@example.com')
+User.create!(username: 'Zareen', password: "password", password_confirmation: 'password', zip_code:78702, email: 'zest@example.com')
+User.create!(username: 'Robert', password: "password", password_confirmation: 'password', zip_code:78707, email: 'rest@example.com')
 
 Toy.create!(brand: 'Baby Einstein', category: 'Baby Toy', condition: 'Like New', description: 'Faker::Lorem.sentence', name:'Rattle', age_group: '0-1 yr', picture_url: '/images/toy2.png')
 Toy.create!(brand: 'Barbie', category: 'Doll', condition: 'Like New', description: 'Faker::Lorem.sentence', name:'Barbie', age_group: '4-8yrs', picture_url: '')
@@ -59,3 +59,9 @@ Toy.create!(brand: 'Whisper Phone', category: 'Baby Toy', condition: 'Like New',
 Toy.create!(brand: 'Workman', category: 'Art & Craft', condition: 'Fair Condition', description: 'Faker::Lorem.sentence', name:'MMM', age_group: '11yr', picture_url: '')
 Toy.create!(brand: 'iTikes', category: 'Activity & Learning', condition: 'Fair Condition', description: 'Faker::Lorem.sentence', name:'RRR', age_group: '0-1yr', picture_url: '')
 Toy.create!(brand: 'Baby Einstein', category: 'Baby Toy', condition: 'Like New', description: 'Faker::Lorem.sentence', name:'ZZZ', age_group: '0-1yr', picture_url: '')
+
+User.all.each do |user|
+  2.times do
+	toy=Toy.create()
+  end
+end
