@@ -44,6 +44,7 @@ var ToySearch = React.createClass ({
              placeholder='What are you looking for?' />
       </div>
         {this.state.filterToys.map(function (toy) {
+          var showUrl = "/toys/" + toy.id
             return (
               <div className="col-xs-4">
                 <div className="row">
@@ -56,7 +57,7 @@ var ToySearch = React.createClass ({
                     <p>{toy.name}</p>
                     <p> {toy.description}</p>
                     <div className="col-xs-12">
-                    <a href="/conversations/new/">Start a Conversation</a>
+                    <a href= {showUrl} >Start a Conversation</a>
                     </div>
                   </div>
                 </div>

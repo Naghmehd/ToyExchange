@@ -8,32 +8,19 @@
 </div>
 <hr>
 <div class="row">
-  <div class="col-xs-4">
-    <p>Other members</p>
-  </div>
-  <div class="col-xs-8">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="row">
-          <p>member and your conversation</p>
-        </div>
-        <hr>
-        <div class="row">
-          <%= simple_form_for @conversation do |f| %>
-          <div class='row'>
-            <div class='col-md-12'>
-              <%= f.label :body %>
-              <%= f.text_area :body, class: 'form-control' %>
-            </div>
-          </div>
-          <div class='row'>
-            <div class='col-md-12'>
-              <%= f.submit class: "btn btn-primary" %>
-            </div>
-          </div>
-        <% end %>
-        </div>
-      </div>
+  <%= simple_form_for @conversation do |f| %>
+  <div class='row'>
+    <div class='col-md-12'>
+      <%= f.label :body %>
+      <%= f.text_area :body, class: 'form-control' %>
     </div>
   </div>
+  <div class='row'>
+    <div class='col-md-12'>
+      <%= f.submit class: "btn btn-primary" %>
+    </div>
+  </div>
+  <% end %>
 </div>
+
+  
