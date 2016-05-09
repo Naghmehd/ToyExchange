@@ -3,10 +3,13 @@
    <h3>Mailbox</h3>
    <div class="ist">
     <div class="item">
+      <% if @conversations.empty? %>
+        <p>You have no conversations</p>
+      <% end %>
       <% @conversations.each do |conversation| %>
         <p>
           <%= link_to conversation.sender.username, conversation_messages_path(conversation) %>
-          is talking to you about: 
+          is talking to you about:
           <%= link_to conversation.toy.name, toy_path(conversation.toy) %>
         </p>
       <% end %>
