@@ -1,1 +1,5 @@
-<h2> This message index page</h2>
+<h2> This is your conversation with <%=  @conversation.sender.username %> about <%= link_to @conversation.toy.name , toy_path(@conversation.toy)%></h2>
+
+<% @messages.each do |message| %>
+  <p><%= message.body %> from <%= message.user.username %></p>
+<% end %>

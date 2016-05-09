@@ -1,18 +1,15 @@
 <h1>User Inbox- index conversations</h1>
-  <div class="t">
+  <div class="">
    <h3>Mailbox</h3>
    <div class="ist">
     <div class="item">
-     <% @conversations.each do |conversation| %>
-     <% if conversation.sender_id == current_user.id ||      conversation.recipient_id == current_user.id %>
-      <% if conversation.sender_id == current_user.id %>
-        <% recipient = User.find(conversation.recipient_id) %>
-      <% else %>
-        <% recipient = User.find(conversation.sender_id) %>
+      <% @conversations.each do |conversation| %>
+        <p>
+          <%= link_to conversation.sender.username, conversation_messages_path(conversation) %>
+          is talking to you about: 
+          <%= link_to conversation.toy.name, toy_path(conversation.toy) %>
+        </p>
       <% end %>
-      <%= link_to recipient.username,   conversation_messages_path(conversation) %>
-     <% end %>
-    <% end %>
     </div>
    </div>
   </div>

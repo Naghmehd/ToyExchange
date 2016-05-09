@@ -1,12 +1,11 @@
 class ConversationsController < ApplicationController
 
   def index
-    @users = User.all
-    @conversations = Conversation.all
+    @conversations = current_user.conversations
   end
 
   def show
-    @conversation = Conversation.new
+    @conversation = get_conversation
   end
 
   def new
@@ -17,10 +16,10 @@ class ConversationsController < ApplicationController
     if Conversation.between(params[:conversation][:sender_id], params[:conversation][:recipient_id]).present?
       @conversation = Conversation.between(params[:conversation][:sender_id], params[:conversation][:recipient_id]).first
     else
-      @conversation = Conversation.create!(conversation_params)
+      @conversation = Conversation.create(conversation_params)
     end
 
-    redirect_to conversation_messages_path(@conversation)
+    redirect_to conversation_path(@conversation)
   end
 
   private
@@ -30,7 +29,7 @@ class ConversationsController < ApplicationController
   end
 
   def conversation_params
-    params.require(:conversation).permit(:body, :user_id, :toy_id,:sender_id, :recipient_id)
+    params.require(:conversation).permit(:body, :user_id, :toy_id, :sender_id, :recipient_id)
   end
 
 

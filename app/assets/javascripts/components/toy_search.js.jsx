@@ -56,7 +56,7 @@ var ToySearch = React.createClass ({
                     <p>{toy.name}</p>
                     <p> {toy.description}</p>
                     <div className="col-xs-4">
-                    <a href="/conversations#new/">Send a Message</a>
+                    <a href="/conversations/new/">Send a Message</a>
                     </div>
                   </div>
                 </div>
