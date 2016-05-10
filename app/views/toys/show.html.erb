@@ -4,21 +4,24 @@
     <h1><%= @toy.name %></h1>
   </div>
   <div class="row">
-    <div class="col-xs-4 toy-box">
-        <%= attachment_image_tag(@toy, :profile_image, :fill, 100, 100, fallback: "/assets/toy2.png", class:'toy-image') %>
+    <div class="col-xs-12">
+      <div class="col-xs-4 toy-box">
+          <%= attachment_image_tag(@toy, :profile_image, :fill, 100, 100, fallback: "/assets/toy2.png", class:'toy-image') %>
+      </div>
+      <div class="col-xs-4 ">
+        <%= @toy.description %>
+      </div>
+      <div class="col-xs-4">
+        <% if current_user.toys.where(id: @toy.id).count > 0  %>
+          <% current_user.toys.each do |toy| %>
+            <%= link_to  "Update", edit_toy_path, class:'btn btn-default' %>
+            <% end %>
+        <% else %>
+          <%= link_to  "Message", conversations_path(conversation: { sender_id: current_user.id, recipient_id: @toy.user.id, toy_id: @toy.id }), method: :POST, class:'btn btn-default' %>
+        <% end %>
+      </div>
     </div>
   </div>
-
-    <div class="col-xs-4 ">
-      <%= @toy.description %>
-    </div>
-    <div class="col-xs-4">
-      <% if current_user.toys.where(id: @toy.id).count > 0  %>
-        <% current_user.toys.each do |toy| %>
-          <%= link_to  "Update", edit_toy_path, class:'btn btn-default' %>
-          <% end %>
-      <% else %>
-        <%= link_to  "Message", conversations_path(conversation: { sender_id: current_user.id, recipient_id: @toy.user.id, toy_id: @toy.id }), method: :POST, class:'btn btn-default' %>
-      <% end %>
-    </div>
 </div>
+</br>
+</br>
