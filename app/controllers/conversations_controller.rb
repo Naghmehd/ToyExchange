@@ -13,8 +13,9 @@ class ConversationsController < ApplicationController
   end
 
   def create
-    @conversation = Conversation.find_or_create_by!(conversation_params)
+    @conversation = Conversation.find_or_create_by(conversation_params)
     if @conversation.present? && @conversation.valid?
+      Wish.find_or_create_by(user_id: current_user.id, toy_id: @conversation.toy.id)
       redirect_to conversation_messages_path(@conversation)
     else
       flash[:alert] = @conversation.errors

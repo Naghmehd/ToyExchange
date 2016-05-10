@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
   has_many :recipient_conversations, foreign_key: :recipient_id, class_name: :Conversation
 
   has_many :wishes
-  has_many :wants, through: :wishes, source: :toy
+  has_many :wanted_toys, through: :wishes, source: :toy
 
 
   def conversations

@@ -20,7 +20,8 @@
   <div class="row">
       <div class="col-xs-4">
         <div class="toy-box">
-        <img scr="<%= t.profile_image %>">
+          <%= image_tag attachment_url(t, :profile_image, :fill, 300, 300, format: "jpg") %>
+
         </div>
         <div class="text-box">
         <p><%= t.description %></p>
@@ -46,14 +47,7 @@
                   </div>
                 <% end %>
             </div>
-            <div class="col-xs-6">
-              <% @wanted_toys.each do |t| %>
-              <p><%= t.description %></p>
-              <div class="col-xs-6 pull-left">
-                <%= link_to  "Send a Message", new_conversation_path, class:'btn btn-default' %>
-              </div>
-              <% end %>
-            </div>
+
           </div>
         </div>
       </div>
