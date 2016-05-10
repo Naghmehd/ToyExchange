@@ -53,10 +53,10 @@ var ToySearch = React.createClass ({
                       <img scr={toy.profile_image}></img>
                     </div>
                   </div>
-                  <div className="col-xs-5 small-box">
+                  <div className="col-xs-12 small-box">
                     <p>{toy.name}</p>
                     <p> {toy.description}</p>
-                    <div className="col-xs-12">
+                    <div className="col-xs-12" className="conversation-lineup">
                     <a href= {showUrl} >Start a Conversation</a>
                     </div>
                   </div>
