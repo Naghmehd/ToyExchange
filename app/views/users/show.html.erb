@@ -1,55 +1,55 @@
 
-  <div class="row">
-    <h1>Hi <%= @user.username %></h1>
+<div class="row">
+  <h1>Hi <%= @user.username %></h1>
+</div>
+<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="col-xs-6">
+      <h3>Your Listed Toys</h3>
+    </div>
+    <div class="col-xs-6 pull-right">
+      <%= link_to  "List Toy", new_toy_path, class:'btn btn-default' %>
+    </div>
   </div>
-  <p id="notice"><%= notice %></p>
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="col-xs-6">
-        <h3>Your Listed Toys</h3>
+</div>
+
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+  <% @user.toys.each do |t| %>
+    <div class="col-xs-4">
+      <div class="toy-box">
+        <%= image_tag attachment_url(t, :profile_image, :fill, 300, 300, format: "png") %>
       </div>
-      <div class="col-xs-6 pull-right">
-        <%= link_to  "List Toy", new_toy_path, class:'btn btn-default' %>
+      <div class="text-box">
+      <p><%= t.description %></p>
+        <%= link_to 'Destroy', toy_path(t.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
       </div>
     </div>
   </div>
+</div>
 
 <hr>
-
-<% @user.toys.each do |t| %>
-  <div class="row">
-      <div class="col-xs-4">
-        <div class="toy-box">
-          <%= image_tag attachment_url(t, :profile_image, :fill, 300, 300, format: "jpg") %>
-
-        </div>
-        <div class="text-box">
-        <p><%= t.description %></p>
-          <%= link_to 'Destroy', toy_path(t.id), method: :delete, data: { confirm: 'Are you sure?' } %>
-        <% end %>
-        </div>
-      </div>
+<div class="row">
+  <div class="col-xs-12">
+      <h3>Your Requested Toys</h3>
   </div>
   <hr>
   <div class="row">
     <div class="col-xs-12">
-        <h3>Your Requested Toys</h3>
-    </div>
-    <hr>
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="col-xs-6">
-          <div class="col-xs-12">
-            <div class="col-xs-6">
-                <% @wanted_toys.each do |t| %>
-                  <div class="toy-box">
-                  <img scr="<%= t.profile_image %>">
-                  </div>
-                <% end %>
-            </div>
-
+      <div class="col-xs-4">
+        <div class="col-xs-4">
+          <div class="col-xs-4">
+              <% @wanted_toys.each do |t| %>
+                <div class="toy-box">
+                <img scr="<%= t.profile_image %>">
+                </div>
+              <% end %>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>

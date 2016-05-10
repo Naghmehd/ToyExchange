@@ -6,7 +6,7 @@ class Toy < ActiveRecord::Base
   has_many :wants, through: :wishes, source: :user
 
   def profile_image_url
-    ActionController::Base.helpers.attachment_url(self, :profile_image, :fill, 100, 100, format: :jpg)
+    ActionController::Base.helpers.attachment_url(self, :profile_image, :fill, 300, 300, format: :png)
   end
 
   def as_json(_)

@@ -1,30 +1,12 @@
 class ToysController < ApplicationController
 
   def index
-    @toys = Toy.all
+    @toys = Toy.all.order('created_at DESC')
     respond_to do |format|
       format.html { }
       format.json { render json: @toys }
     end
   end
-
-  # def toys
-  #   all_toys = Toy.all.sort_by { |t| [t.name]}.reverse!
-  #   current_page = params[:page].toy_id
-  #   if current_page <= 1
-  #     start_number = 0
-  #     end_number = 10
-  #   else
-  #     start_number = current_page + 10
-  #     end_number = current_page * 10
-  #   end
-  #
-  #   @toys = all_toys[start_number..end_number]
-  #   respond_to do |format|
-  #     format.html { }
-  #     format.json { render json: @toys }
-  #   end
-  # end
 
   def show
     @toy = Toy.find(params[:id])
