@@ -1,6 +1,6 @@
 <h1> List your toys by filling the form</h1>
 
-<%= simple_form_for @toys do |f| %>
+<%= simple_form_for [Toy.new] do |f| %>
   <%= f.error_notification %>
   <div class="form-inputs">
     <%= f.hidden_field :user_id, :value => current_user.id %>
