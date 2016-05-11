@@ -60,7 +60,7 @@ var FilterbarSearch = React.createClass({
                   <li onClick={this.setAgeGroup.bind(this, '1-2yrs')}><a href="#">1-2yrs</a></li>
                   <li onClick={this.setAgeGroup.bind(this, '2-4yrs')}><a href="#">2-4yrs</a></li>
                   <li onClick={this.setAgeGroup.bind(this, '4-8yrs')}><a href="#">4-8yrs</a></li>
-                  <li onClick={this.setCondition.bind(this, 'All')}><a href="#">All</a></li>
+                  <li onClick={this.setAgeGroup.bind(this, 'All')}><a href="#">All</a></li>
 
                 </ul>
               </li>
@@ -77,14 +77,15 @@ var FilterbarSearch = React.createClass({
                   <li onClick={this.setCategory.bind(this, 'Arts & Crafts')}><a href="#">Arts & Crafts</a></li>
                   <li onClick={this.setCategory.bind(this, 'Baby Toys')}><a href="#">Baby Toys</a></li>
                   <li onClick={this.setCategory.bind(this, 'Dolls')}><a href="#">Dolls</a></li>
-                  <li onClick={this.setCondition.bind(this, 'All')}><a href="#">All</a></li>
+                  <li onClick={this.setCategory.bind(this, 'All')}><a href="#">All</a></li>
                 </ul>
               </li>
             </ul>
           </div>
 
-          <ToySearch condition={this.state.condition} />
-      
+          <ToySearch  />
+
+
         </div>
       );
     },

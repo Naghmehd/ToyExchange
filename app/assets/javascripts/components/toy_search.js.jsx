@@ -2,6 +2,8 @@ var ToySearch = React.createClass ({
 
   getInitialState: function(){
     store.filterByCondition = this.filterByCondition.bind(this)
+    store.filterByAgeGroup = this.filterByAgeGroup.bind(this)
+    store.filterByCategory = this.filterByCategory.bind(this)
     return {
       allToys:[],
       filterToys:[],
@@ -30,19 +32,19 @@ var ToySearch = React.createClass ({
   filterByCondition: function(condition){
     var filteredToys = this.state.allToys.filter(function(toy) {
       if (condition === 'All') {
-        return true
+        return true;
       }
       return toy.condition === condition;
     });
     this.setState({filterToys: filteredToys});
   },
 
-  filterByAgeGroup: function(age_group){
+  filterByAgeGroup: function(ageGroup){
     var filteredToys = this.state.allToys.filter(function(toy) {
-      if (age_group === 'All') {
-        return true
+      if (ageGroup === 'All') {
+        return true;
       }
-      return toy.age_group === age_group;
+      return toy.ageGroup === ageGroup;
     });
     this.setState({filterToys: filteredToys});
   },
@@ -50,7 +52,7 @@ var ToySearch = React.createClass ({
   filterByCategory: function(category){
     var filteredToys = this.state.allToys.filter(function(toy) {
       if (category === 'All') {
-        return true
+        return true;
       }
       return toy.category === category;
     });
@@ -61,7 +63,6 @@ var ToySearch = React.createClass ({
     var searchReturn = this.state.allToys.filter(function (toy) {
       return (
               toy.brand.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1 ||
-              toy.category.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1 ||
               toy.description.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1 ||
               toy.name.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1 );
     }.bind(this));
