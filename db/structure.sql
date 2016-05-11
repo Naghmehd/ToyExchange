@@ -204,36 +204,6 @@ CREATE TABLE schema_migrations (
 
 
 --
--- Name: toy_wishs; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE toy_wishs (
-    id integer NOT NULL,
-    wish_id integer,
-    toy_id integer
-);
-
-
---
--- Name: toy_wishs_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE toy_wishs_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: toy_wishs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE toy_wishs_id_seq OWNED BY toy_wishs.id;
-
-
---
 -- Name: toys; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -387,13 +357,6 @@ ALTER TABLE ONLY refile_attachments ALTER COLUMN id SET DEFAULT nextval('refile_
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY toy_wishs ALTER COLUMN id SET DEFAULT nextval('toy_wishs_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
---
-
 ALTER TABLE ONLY toys ALTER COLUMN id SET DEFAULT nextval('toys_id_seq'::regclass);
 
 
@@ -449,14 +412,6 @@ ALTER TABLE ONLY messages
 
 ALTER TABLE ONLY refile_attachments
     ADD CONSTRAINT refile_attachments_pkey PRIMARY KEY (id);
-
-
---
--- Name: toy_wishs_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY toy_wishs
-    ADD CONSTRAINT toy_wishs_pkey PRIMARY KEY (id);
 
 
 --
@@ -650,6 +605,4 @@ INSERT INTO schema_migrations (version) VALUES ('20160506163801');
 INSERT INTO schema_migrations (version) VALUES ('20160507023927');
 
 INSERT INTO schema_migrations (version) VALUES ('20160507221211');
-
-INSERT INTO schema_migrations (version) VALUES ('20160510141655');
 

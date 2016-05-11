@@ -15,9 +15,11 @@
 </div>
 </br>
 <div class="row">
-  <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">
+  <% if user_signed_in? %>
+  <button  type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">
      List Your Toy
   </button>
+  <% end %>
    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
      <div class="modal-dialog" role="document">
        <div class="modal-content">
@@ -36,6 +38,5 @@
 </br>
 <!-- This is the filter -->
 <%= react_component('FilterbarSearch')%>
-</br>
 </br>
 </br>
