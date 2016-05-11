@@ -19,7 +19,7 @@ class ToysController < ApplicationController
 
   def create
     @toy = current_user.toys.build(toy_params)
-    @user = current_user
+    @user = current_user.id
 
       respond_to do |format|
          if @toy.save

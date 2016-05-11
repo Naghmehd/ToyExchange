@@ -36,16 +36,6 @@
 //     $("div#FilterContainer").find("div." + filters).show();
 // });
 
-$('select').change(function () {
-    var current = this.value;
+var store = {
 
-    if (current == 'all') {
-        $('#FilterContainer').find('li.all').show();
-    } else {
-
-        $('#FilterContainer').find('li').hide();
-        $('#FilterContainer').find('li.all.' + current).show();
-    }
-
-    return false;
-});
+};

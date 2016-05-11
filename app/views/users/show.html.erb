@@ -35,7 +35,7 @@
   <% @user.toys.each do |t| %>
     <div class="col-xs-4">
       <div class="toy-box">
-        <%= image_tag attachment_url(t, :profile_image, :fill, 300, 300, format: "png") %>
+        <%= image_tag attachment_url(t, :profile_image, :fill, 100, 100, format: "png") %>
       </div>
       <div class="text-box">
       <p><%= t.description %></p>

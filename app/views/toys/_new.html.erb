@@ -3,7 +3,7 @@
 <%= simple_form_for [Toy.new] do |f| %>
   <%= f.error_notification %>
   <div class="form-inputs">
-    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.hidden_field :user_id, :value => current_user %>
     <%= f.label :category, required: true %>
     <p><%=f.select :category,[['Activity & Learning','activity & learning'],['Arts & Crafts','arts & crafts'],['Baby Toys', 'baby toys'],['Dolls','dolls'],['Game', 'game']]%></p>
     <%= f.label :condition, require: true %>
