@@ -32,16 +32,15 @@
 <hr>
 <div class="row">
   <div class="col-xs-12">
-  <% @user.toys.each do |t| %>
-    <div class="col-xs-4">
-      <div class="toy-box">
-        <%= image_tag attachment_url(t, :profile_image, :fill, 100, 100, format: "png") %>
-      </div>
-      <div class="text-box">
+    <% @user.toys.each do |t| %>
+    <div class="">
+      <%= image_tag attachment_url(t, :profile_image, :fill, 100, 100, format: "png") %>
+    </div>
+    <div class="">
+      <p><%= t.name %></p>
       <p><%= t.description %></p>
-        <%= link_to 'Destroy', toy_path(t.id), method: :delete, data: { confirm: 'Are you sure?' } %>
-      <% end %>
-      </div>
+      <%= link_to 'Destroy', toy_path(t.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
     </div>
   </div>
 </div>
@@ -52,19 +51,9 @@
       <h3>Your Requested Toys</h3>
   </div>
   <hr>
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="col-xs-4">
-        <div class="col-xs-4">
-          <div class="col-xs-4">
-              <% @wanted_toys.each do |t| %>
-                <div class="toy-box">
-                <img scr="<%= t.profile_image %>">
-                </div>
-              <% end %>
-          </div>
-        </div>
+    <% @wanted_toys.each do |t| %>
+      <div class="">
+      <img scr="<%= t.profile_image %>">
       </div>
-    </div>
-  </div>
+    <% end %>
 </div>

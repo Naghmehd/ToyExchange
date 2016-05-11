@@ -87,7 +87,7 @@ var ToySearch = React.createClass ({
               <div className="col-xs-4">
                 <div className="row">
                   <div className="col-xs-12">
-                    <div className="col-xs-2 toy-box">
+                    <div className="col-xs-2">
                       <img src={toy.profile_image_url} class="img-responsive"  />
                     </div>
                   </div>
