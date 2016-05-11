@@ -36,8 +36,6 @@ gem "refile", require: "refile/rails"
 gem "refile-mini_magick"
 gem 'refile-postgres'
 
-
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -70,16 +68,10 @@ group :development do
   gem 'spring'
 end
 
-
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'faker'
 gem 'kaminari'
 gem 'bcrypt'
-
-#Gems for image uploads
-gem "refile", require: "refile/rails"
-gem "refile-mini_magick"
-gem 'refile-postgres'
 
 group :production do
   gem 'puma'
