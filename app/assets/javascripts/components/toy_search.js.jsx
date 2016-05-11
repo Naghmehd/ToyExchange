@@ -1,9 +1,9 @@
 var ToySearch = React.createClass ({
 
   getInitialState: function(){
-    store.filterByCondition = this.filterByCondition.bind(this)
-    store.filterByAgeGroup = this.filterByAgeGroup.bind(this)
-    store.filterByCategory = this.filterByCategory.bind(this)
+    store.filterByCondition = this.filterByCondition
+    store.filterByAgeGroup = this.filterByAgeGroup
+    store.filterByCategory = this.filterByCategory
     return {
       allToys:[],
       filterToys:[],
@@ -82,10 +82,10 @@ var ToySearch = React.createClass ({
              onChange={this.filterList} value={this.state.query}
              placeholder='What are you looking for?' />
       </div>
-        {this.state.filterToys.map(function (toy) {
+        {this.state.filterToys.map(function (toy, index) {
           var showUrl = "/toys/" + toy.id
             return (
-              <div className="col-xs-4">
+              <div key={index} className="col-xs-4">
                 <div className="row">
                   <div className="col-xs-12">
                     <div className="col-xs-2">
