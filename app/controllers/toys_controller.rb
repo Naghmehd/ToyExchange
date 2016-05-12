@@ -19,20 +19,17 @@ class ToysController < ApplicationController
 
   def create
     @toy = current_user.toys.build(toy_params)
-    @user = current_user.id
-
-      respond_to do |format|
-         if @toy.save
-           format.html { redirect_to user_path(@user), notice: 'Toy was successfully created.' }
-           format.js   { }
-           format.json { render :show, status: :created, location: @toy }
-         else
-           format.html { render :new_toy_path }
-           format.json { render json: @toy.errors, status: :unprocessable_entity}
-         end
+    respond_to do |format|
+       if @toy.save
+         format.html { redirect_to user_path(current_user), notice: 'Toy was successfully created.' }
+         format.js   { }
+         format.json { render :show, status: :created, location: @toy }
+       else
+         format.html { render :new_toy_path }
+         format.json { render json: @toy.errors, status: :unprocessable_entity}
        end
+     end
   end
-
 
   def edit
     @toy = get_toy

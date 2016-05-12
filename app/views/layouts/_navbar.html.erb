@@ -1,13 +1,13 @@
-<header class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
+<nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-        <nav>
+      <div class="navbar-header">
           <img src="/assets/logopwt.png" alt="logo" class="logo">
+          <div id="navbar">
           <ul class="nav pull-left">
               <li><%= link_to "Home", static_pages_home_path %></li>
               <li><%= link_to "How To", companies_path %></li>
               <% if signed_in? %>
-                <li class="nav-dropdown">
+                <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     Account <b class="caret"></b>
                   </a>
@@ -21,7 +21,7 @@
                   <li><%= link_to "Log In | Register", new_user_session_path %></li>
               <% end %>
           </ul>
-        </nav>
+        </div>
       </div>
-  </div>
-</header>
+    </div>
+</nav>

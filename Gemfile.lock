@@ -241,6 +241,8 @@ GEM
       mime-types
       rest-client (~> 1.8)
       sinatra (~> 1.4.5)
+    refile-memory (0.2.0)
+      refile
     refile-mini_magick (0.2.0)
       mini_magick (~> 4.0)
       refile (~> 0.5)
@@ -348,6 +350,7 @@ DEPENDENCIES
   rails_12factor
   react-rails (~> 1.7.0)
   refile
+  refile-memory
   refile-mini_magick
   refile-postgres (~> 1.4.0)
   sass-rails (~> 5.0)

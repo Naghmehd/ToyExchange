@@ -82,6 +82,7 @@ var ToySearch = React.createClass ({
              onChange={this.filterList} value={this.state.query}
              placeholder='What are you looking for?' />
       </div>
+      {this.props.children}
         {this.state.filterToys.map(function (toy, index) {
           var showUrl = "/toys/" + toy.id
             return (

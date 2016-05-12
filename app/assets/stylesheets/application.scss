@@ -78,6 +78,9 @@ li {
   float: left;
 }
 
+div #navbar {
+  float: left;
+}
 .navbar {
   background-color: $primary-color;
   border-bottom: 5px solid $secondary-color;
@@ -131,11 +134,6 @@ a .dropdown-toggle {
     padding: 0 5px 0 0;
     position: relative;
     vertical-align: top;
-}
-
-.better-row {
-  margin-left: 0;
-  margin-right: 0;
 }
 
 .filter {
