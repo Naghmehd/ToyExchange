@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<div class="container">
+
   <div class="row">
     <h1><%= @toy.name %></h1>
   </div>
@@ -8,7 +8,7 @@
       <div class="col-xs-4">
           <%= attachment_image_tag(@toy, :profile_image, :fill, 100, 100, fallback: "/assets/toy2.png", class:'toy-image') %>
       </div>
-      <div class="col-xs-4 ">
+      <div class="col-xs-4">
         <%= @toy.description %>
       </div>
       <div class="col-xs-4">
@@ -22,6 +22,3 @@
       </div>
     </div>
   </div>
-</div>
-</br>
-</br>

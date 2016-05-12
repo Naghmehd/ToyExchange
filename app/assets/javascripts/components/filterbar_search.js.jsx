@@ -33,8 +33,8 @@ var FilterbarSearch = React.createClass({
 
     return (
       <div className="row data-query filterbar-search">
-        <div className="col-xs-3 filterby">Search By</div>
-          <div className="col-xs-3 filter">
+        <div className="col-xs-12 col-sm-3 filterby">Search By</div>
+          <div className="col-xs-12 col-sm-3 filter">
             <ul className="filter-dropdown pull-left">
               <li className="dropdown">
                 <a href="#" className="dropdown-toggle" data-toggle="dropdown">
@@ -49,7 +49,7 @@ var FilterbarSearch = React.createClass({
               </li>
             </ul>
           </div>
-          <div className="col-xs-3 filter">
+          <div className="col-xs-12 col-sm-3 filter">
             <ul className="filter-dropdown pull-left">
               <li className="dropdown">
                 <a href="#" className="dropdown-toggle" data-toggle="dropdown">
@@ -66,7 +66,7 @@ var FilterbarSearch = React.createClass({
               </li>
             </ul>
         </div>
-          <div className="col-xs-3 filter">
+          <div className="col-xs-12 col-sm-3 filter">
             <ul className="filter-dropdown pull-left">
               <li className="dropdown">
                 <a href="#" className="dropdown-toggle" data-toggle="dropdown">

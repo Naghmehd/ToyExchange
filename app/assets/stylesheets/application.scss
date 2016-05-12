@@ -48,6 +48,13 @@ body {
 
 }
 
+#wrapper {
+  min-height: 100%;
+  width: 95%;
+  margin: 0 auto;
+}
+
+
 .logo {
   float: left;
   width:60px;
@@ -129,12 +136,6 @@ a .dropdown-toggle {
 .better-row {
   margin-left: 0;
   margin-right: 0;
-}
-
-/* Wrapper for page content to push down footer */
-#wrap {
-  min-height: 100%;
-  height: auto;
 }
 
 .filter {
@@ -230,17 +231,4 @@ footer {
 #fall_footnotes {
   background-color: $primary-color;
   color: white;
-}
-
-
-
-/* Lastly, apply responsive CSS fixes as necessary */
-
-@media (min-width: 650px-) {
-  #footer {
-    margin-left: -20px;
-    margin-right: -20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    }
 }
