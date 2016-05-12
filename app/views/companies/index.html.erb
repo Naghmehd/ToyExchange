@@ -1,7 +1,7 @@
 <%= render partial: '/layouts/navbar' %>
 <div class="container">
   <div class="row">
-    <div class="">
+    <div class="col-xs-6">
       <h2>How To</h2>
       <p>Do you have a closet full of toys that your kids don't play with anymore?<p>
       <p>Are you tired of spending hundreds of dollars on toys that quickly abandoned?</p>
@@ -13,9 +13,12 @@
         <p>Track how much money you saved with the toys you have exchanged.</p>
       </p>
     </div>
+    <div class="col-xs-6">
+      <img src="assets/toy2.png" width="50%">
+    </div>
   </div>
     <div class="row">
-      <div align="left">
+      <div class="col-xs-6" align="left">
         <h3>Send A message to Us</h3>
           <%= simple_form_for Contact.new do |f| %>
             <%= f.input :name, :required => true %>
