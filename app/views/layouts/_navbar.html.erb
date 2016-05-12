@@ -1,10 +1,9 @@
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
-          <img src="/assets/logopwt.png" alt="logo" class="logo">
+        <%= link_to image_tag("/assets/logopwt.png", class: "logo"), root_path %>
           <div id="navbar">
           <ul class="nav pull-left">
-              <li><%= link_to "Home", static_pages_home_path %></li>
               <li><%= link_to "How To", companies_path %></li>
               <% if signed_in? %>
                 <li class="dropdown">
