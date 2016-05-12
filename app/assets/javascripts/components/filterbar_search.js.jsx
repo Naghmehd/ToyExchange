@@ -32,7 +32,7 @@ var FilterbarSearch = React.createClass({
   render: function(){
 
     return (
-      <div className="row data-query">
+      <div className="row data-query filterbar-search">
         <div className="col-xs-3 filterby">Search By</div>
           <div className="col-xs-3 filter">
             <ul className="filter-dropdown pull-left">
