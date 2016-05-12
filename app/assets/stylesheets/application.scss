@@ -56,6 +56,7 @@ body {
 
 .nav {
   padding: 9px;
+  margin-bottom: 3px;
 }
 
 .nav > li > a {
@@ -83,12 +84,16 @@ li {
       color: white;
       &:hover {
         text-decoration: none;
-        color: white;
+        background-color: darken($primary-color, 5%);
       }
     }
   }
 }
 
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background-color: darken($primary-color, 5%);
+    border-color: #337ab7;
+}
 .navbar.navbar-default.navbar-fixed-top {
   background-color: $primary-color;
   color: white;
@@ -111,10 +116,8 @@ li {
   margin-bottom: 2em;
 }
 
-a {
-  .dropdown-toggle {
-    color: #c3c3c3;
-  }
+a .dropdown-toggle {
+    color: #c3c3c3;  
 }
 
 .pluginButton {
@@ -151,6 +154,14 @@ a {
     color: #c4c4c4;
 }
 
+.dropdown-menu {
+  min-width: 90px;
+}
+
+#FilterContainer .dropdown-menu {
+  mid-width: 90 px;
+}
+
 .toy-box {
     display: block;
     border-bottom: 1px solid #e1e8ed;
@@ -174,6 +185,10 @@ a {
 .toy-image {
   width: 100px;
   height: 100px;
+}
+
+.search-bar {
+  margin-bottom: 3em;
 }
 .small-box {
   margin-left: 2.65em;

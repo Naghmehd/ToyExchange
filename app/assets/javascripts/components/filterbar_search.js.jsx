@@ -76,6 +76,7 @@ var FilterbarSearch = React.createClass({
                   <li onClick={this.setCategory.bind(this, 'Activity & Learning')}><a href="#">Activity & Learning</a></li>
                   <li onClick={this.setCategory.bind(this, 'Arts & Crafts')}><a href="#">Arts & Crafts</a></li>
                   <li onClick={this.setCategory.bind(this, 'Baby Toys')}><a href="#">Baby Toys</a></li>
+                  <li onClick={this.setCategory.bind(this, 'Games')}><a href="#">Games</a></li>
                   <li onClick={this.setCategory.bind(this, 'Dolls')}><a href="#">Dolls</a></li>
                   <li onClick={this.setCategory.bind(this, 'All')}><a href="#">All</a></li>
                 </ul>
