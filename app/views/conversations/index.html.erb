@@ -1,19 +1,19 @@
-<h1>User Inbox- index conversations</h1>
-  <div class="">
-   <h3>Mailbox</h3>
-   <div class="ist">
-    <div class="item">
-      <% if @conversations.empty? %>
-        <p>You have no conversations</p>
-      <% end %>
-      <% @conversations.each do |conversation| %>
-        <p>
-          <%= link_to conversation.sender.username, conversation_messages_path(conversation) %>
-          is talking to you about:
-          <%= link_to conversation.toy.name, toy_path(conversation.toy) %>
-        </p>
-      <% end %>
-    </div>
-   </div>
+<div class="container">
+ <h3>Mailbox</h3>
+ <div class="list">
+  <div class="item">
+    <% if @conversations.empty? %>
+      <p>You have no conversations</p>
+    <% end %>
+    <% @conversations.each do |conversation| %>
+      <p>
+        <%= conversation.sender.username %>
+         is talking about :
+        <%= link_to conversation.toy.name, toy_path(conversation.toy) %>
+        send them a message
+        <%= link_to conversation.sender.username, conversation_messages_path(conversation) %>
+      </p>
+    <% end %>
   </div>
+ </div>
 </div>

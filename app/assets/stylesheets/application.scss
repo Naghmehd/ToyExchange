@@ -117,7 +117,7 @@ li {
 }
 
 a .dropdown-toggle {
-    color: #c3c3c3;  
+    color: #c3c3c3;
 }
 
 .pluginButton {
@@ -137,7 +137,6 @@ a .dropdown-toggle {
   height: auto;
 }
 
-
 .filter {
   background-color: #f7f7f7;
   border-bottom: 2px solid #f7f7f7;
@@ -156,10 +155,6 @@ a .dropdown-toggle {
 
 .dropdown-menu {
   min-width: 90px;
-}
-
-#FilterContainer .dropdown-menu {
-  mid-width: 90 px;
 }
 
 .toy-box {
@@ -187,6 +182,10 @@ a .dropdown-toggle {
   height: 100px;
 }
 
+.image-height {
+  min-height: 500px;
+}
+
 .search-bar {
   margin-bottom: 3em;
 }
@@ -200,6 +199,14 @@ a .dropdown-toggle {
 
 .conversation-lineup a {
   margin-left: 0px;
+}
+
+.item{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid;
 }
 
 hr {
@@ -225,14 +232,15 @@ footer {
   color: white;
 }
 
+
+
 /* Lastly, apply responsive CSS fixes as necessary */
 
-
-@media (max-width: 767px) {
-#footer {
-  margin-left: -20px;
-  margin-right: -20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  }
+@media (min-width: 650px-) {
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    }
 }
