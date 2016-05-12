@@ -38,15 +38,31 @@ h1, h2, h3, h4, h5, h6, .btn, .btn-default {
 body {
   font-family: Dosis, sans-serif;
   margin-top: 11em;
+  margin-bottom: 11em;
+  font-size: 16px;
   color: #333;
   min-width: 100%;
   min-height: 100%;
   width: auto;
   height: auto;
+
+}
+
+.logo {
+  float: left;
+  width:60px;
+  height:60px;
+}
+
+.nav {
+  padding: 9px;
 }
 
 .nav > li > a {
     color: white;
+    &:hover, &:focus, &:active {
+      background-color: darken($primary-color, 5%);
+    }
 }
 
 li {
@@ -150,6 +166,10 @@ a {
 
 }
 
+.filter-image {
+  width:100%;
+}
+
 .toy-image {
   width: 100px;
   height: 100px;
@@ -180,6 +200,7 @@ footer {
     height: 100px;
     bottom: 0;
     width: 100%;
+    margin-top: 3em;
     background-color: $primary-color;
 }
 

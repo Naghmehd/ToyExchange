@@ -85,14 +85,10 @@ var ToySearch = React.createClass ({
         {this.state.filterToys.map(function (toy, index) {
           var showUrl = "/toys/" + toy.id
             return (
-              <div key={index} className="col-xs-4">
+              <div key={index} className="col-xs-4 col-min-height">
                 <div className="row">
                   <div className="col-xs-12">
-                    <div className="col-xs-2">
-                      <img src={toy.profile_image_url} class="img-responsive"  />
-                    </div>
-                  </div>
-                  <div className="col-xs-12 small-box">
+                      <img className="filter-image" src="https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg" class="img-responsive"  />
                     <p>{toy.name}</p>
                     <p>{toy.category}</p>
                     <p>{toy.condition}</p>

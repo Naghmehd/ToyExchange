@@ -32,6 +32,7 @@
 <hr>
 <div class="row">
   <div class="col-xs-12">
+    <div class="col-xs-6"
     <% @user.toys.each do |t| %>
     <div class="">
       <%= image_tag attachment_url(t, :profile_image, :fill, 100, 100, format: "png") %>
@@ -42,6 +43,7 @@
       <%= link_to 'Delete', toy_path(t.id), method: :delete, class: 'btn btn-default', data: { confirm: 'Are you sure?' } %>
     <% end %>
     </div>
+  </div>
   </div>
 </div>
 
