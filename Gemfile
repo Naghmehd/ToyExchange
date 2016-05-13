@@ -36,6 +36,8 @@ gem "refile", require: "refile/rails"
 gem "refile-mini_magick"
 gem 'refile-postgres', '~> 1.4.0'
 gem 'refile-memory'
+gem 'figaro'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
