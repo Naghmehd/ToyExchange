@@ -1,10 +1,12 @@
 var FilterbarSearch = React.createClass({
 
   getInitialState: function(){
+    store.updateToyCount = this.updateToyCount
     return {
-      condition: '',
-      ageGroup: '',
-      category: ''
+      condition: 'All',
+      ageGroup: 'All',
+      category: 'All',
+      filterToysCount: 0
     };
   },
 
@@ -29,17 +31,23 @@ var FilterbarSearch = React.createClass({
     store.filterByCategory(category);
   },
 
+  updateToyCount: function (count) {
+    this.setState({
+      filterToysCount: count
+    });
+  },
+
   render: function(){
 
     return (
         <ToySearch>
           <div className="row data-query filterbar-search">
-            <div className="col-xs-12 col-sm-3 filterby">Search By</div>
+            <div className="col-xs-12 col-sm-3 filterby">Search {this.state.filterToysCount} Toys By</div>
               <div className="col-xs-12 col-sm-3 filter">
                 <ul className="filter-dropdown pull-left">
                   <li className="dropdown">
                     <a href="#" className="dropdown-toggle" data-toggle="dropdown">
-                      Condition <b className="caret"></b>
+                    Condition: {this.state.condition} <b className="caret"></b>
                     </a>
                     <ul className="dropdown-menu" id="FilterContainer">
                       <li onClick={this.setCondition.bind(this, 'Like New')}><a href="#">Like New</a></li>
@@ -54,7 +62,7 @@ var FilterbarSearch = React.createClass({
                 <ul className="filter-dropdown pull-left">
                   <li className="dropdown">
                     <a href="#" className="dropdown-toggle" data-toggle="dropdown">
-                      Age Group <b className="caret"></b>
+                      Age Group: {this.state.ageGroup} <b className="caret"></b>
                     </a>
                     <ul className="dropdown-menu" id="FilterContainer">
                       <li onClick={this.setAgeGroup.bind(this, '0-1yr')}><a href="#">0-1yr</a></li>
@@ -71,7 +79,7 @@ var FilterbarSearch = React.createClass({
                 <ul className="filter-dropdown pull-left">
                   <li className="dropdown">
                     <a href="#" className="dropdown-toggle" data-toggle="dropdown">
-                      Category <b className="caret"></b>
+                      Category: {this.state.category} <b className="caret"></b>
                     </a>
                     <ul className="dropdown-menu" id="FilterContainer">
                       <li onClick={this.setCategory.bind(this, 'Activity & Learning')}><a href="#">Activity & Learning</a></li>

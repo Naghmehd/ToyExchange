@@ -24,6 +24,7 @@ var ToySearch = React.createClass ({
         filterToys: response,
         displayToys: response
       });
+      store.updateToyCount(response.length);
 
     }.bind(this));
 
@@ -37,6 +38,7 @@ var ToySearch = React.createClass ({
       return toy.condition === condition;
     });
     this.setState({filterToys: filteredToys});
+    store.updateToyCount(filteredToys.length);
   },
 
   filterByAgeGroup: function(ageGroup){
@@ -47,6 +49,7 @@ var ToySearch = React.createClass ({
       return toy.ageGroup === ageGroup;
     });
     this.setState({filterToys: filteredToys});
+    store.updateToyCount(filteredToys.length);
   },
 
   filterByCategory: function(category){
@@ -57,6 +60,7 @@ var ToySearch = React.createClass ({
       return toy.category === category;
     });
     this.setState({filterToys: filteredToys});
+    store.updateToyCount(filteredToys.length);
   },
 
   filterList: function(e){
@@ -72,6 +76,7 @@ var ToySearch = React.createClass ({
       displayToys: searchReturn,
       query: e.target.value
     });
+    store.updateToyCount(searchReturn.length);
   },
 
   render: function(){
