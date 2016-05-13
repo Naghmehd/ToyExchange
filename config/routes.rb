@@ -7,13 +7,13 @@ Rails.application.routes.draw do
   resources :users
   resources :toys
 
-
   resources :conversations do
     resources :messages
   end
   resources :companies
   resources :wishes
 
+  match '/contacts',     to: 'contacts#new',             via: 'get'
   resources "contacts", only: [:new, :create]
 
   get '/auth/:provider/callback', to: 'sessions#create'
