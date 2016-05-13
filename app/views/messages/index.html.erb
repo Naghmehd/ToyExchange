@@ -1,16 +1,14 @@
-<h2> This is your conversation with <%=  @conversation.sender.username %> about <%= link_to @conversation.toy.name , toy_path(@conversation.toy)%></h2>
-
+<h2> This is your conversation about <%= link_to @conversation.toy.name , toy_path(@conversation.toy)%></h2>
+<div class="col-xs-6">
 <% @messages.each do |message| %>
-  <p><%= message.body %> from <%= message.user.username %></p>
+  <p><%= message.user.username %> : <%= message.body %> </p>
 <% end %>
 <%= simple_form_for [@conversation, Message.new] do |f| %>
-  <div class="field">
     <%= f.hidden_field :toys_id, :value => @toy %>
     <%= f.hidden_field :user_id, :value => current_user.id %>
-    <%= f.label :message %>
-    <%= f.text_area :body %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Send" %>
+    <%= f.input :body, :as => :text %>
+  <div>
+    <%= f.button :submit, 'Send', :class=> "btn btn-primary" %>
   </div>
 <% end %>
+</div>

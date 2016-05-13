@@ -1,17 +1,13 @@
 
-<h3>Mailbox</h3>
+<h3>Inbox</h3>
  <% if @conversations.empty? %>
    <p>You have no conversations</p>
  <% end %>
  <% @conversations.each do |conversation| %>
    <div class="panel panel-default">
      <div class="panel-body">
-       <p>
-         <%= conversation.sender.username %>
-          is talking about :
+       <p><%= link_to "Conversation about", conversation_messages_path(conversation) %>
          <%= link_to conversation.toy.name, toy_path(conversation.toy) %>
-         send them a message
-         <%= link_to conversation.sender.username, conversation_messages_path(conversation) %>
        </p>
      </div>
    </div>
