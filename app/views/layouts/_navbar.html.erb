@@ -1,10 +1,11 @@
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
-        <%= link_to image_tag("/assets/logopwt.png", class: "logo"), root_path %>
-          <div id="navbar">
-          <ul class="nav pull-left">
-              <li><%= link_to "How To", companies_path %></li>
+          <%= link_to image_tag("/assets/logopwt.png", class: "logo"), root_path %>
+          <%= link_to "ToyExchange", root_path, class: "toyExchange" %>
+        </div>
+          <ul class="nav navbar-nav pull-right">
+            <li><%= link_to "How To", companies_path %></li>
               <% if signed_in? %>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -20,7 +21,6 @@
                   <li><%= link_to "Log In | Register", new_user_session_path %></li>
               <% end %>
           </ul>
-        </div>
       </div>
     </div>
 </nav>
