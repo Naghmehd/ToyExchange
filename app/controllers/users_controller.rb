@@ -12,5 +12,4 @@ class UsersController < ApplicationController
     def get_toy
       @toy = Toy.find(params.fetch(:id))
     end
-
 end

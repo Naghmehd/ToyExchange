@@ -9,7 +9,7 @@ class ToysController < ApplicationController
   end
 
   def show
-    @toy = Toy.find(params[:id])
+    @toy = get_toy
     @conversation = Conversation.new
   end
 
