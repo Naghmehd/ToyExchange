@@ -89,7 +89,7 @@ var ToySearch = React.createClass ({
               <div key={index} className="col-xs-12 col-sm-4 image-height">
                 <div className="row">
                   <div className="col-xs-12">
-                      <img className="filter-image" src={toy.profile_image_url}  className="img-responsive"  />
+                      <img className="filter-image" src={toy.profile_image_url} width={200} height={200} mode='fit' className="img-responsive"  />
                     <p>{toy.name}</p>
                     <p>{toy.category}</p>
                     <p>{toy.condition}</p>
