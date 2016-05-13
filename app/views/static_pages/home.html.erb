@@ -4,35 +4,35 @@
   </div>
 </div>
 </br>
-<div class="row">
-  <div class="col-xs-12 account-row">
-    <% if user_signed_in? %>
-    <div class="col-xs-1">
-      <%= button_to 'Inbox', conversations_path, class: "btn btn-secondary", :method => :get %>
-    </div>
-    <div class="col-xs-1">
-     <%= button_to "My Toys", user_path(:id), class: "btn btn-secondary", :method => :get %>
-    </div>
-    <div class="col-xs-10">
-      <button  type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">
-         List Your Toy
-      </button>
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-         <div class="modal-dialog" role="document">
-           <div class="modal-content">
-             <div class="modal-header">
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-               <h4 class="modal-title" id="myModalLabel">New Toy</h4>
-             </div>
-             <div class="modal-body">
-                <%= render partial: 'toys/new' %>
-              </div>
+
+<div class="btn-toolbar" role="toolbar" aria-label="...">
+  <% if user_signed_in? %>
+    <%= button_to 'Inbox', conversations_path, form_class: 'btn-group', class: "btn btn-default", type: "button", :method => :get %>
+
+    <%= button_to "My Toys", user_path(current_user), form_class: 'btn-group', class: "btn btn-default", type: "button", :method => :get %>
+
+    <button  type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
+       List Your Toy
+    </button>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+       <div class="modal-dialog" role="document">
+         <div class="modal-content">
+           <div class="modal-header">
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+             <h4 class="modal-title" id="myModalLabel">New Toy</h4>
+           </div>
+           <div class="modal-body">
+              <%= render partial: 'toys/new' %>
            </div>
          </div>
-      </div>
+       </div>
     </div>
   <% end %>
 </div>
+
+
+
 
 </br>
 </br>

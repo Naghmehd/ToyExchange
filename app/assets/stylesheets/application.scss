@@ -65,6 +65,8 @@ a.toyExchange {
   font-family: Pacifico;
   font-size: 2em;
   color: white;
+  text-decoration: none;
+  margin-left: 0.5em;
 }
 
 .nav {
@@ -175,7 +177,7 @@ a .dropdown-toggle {
 }
 
 .account-row {
-  margin-bottom: 2em;
+  display: inline-block;
 }
 
 .filter {
