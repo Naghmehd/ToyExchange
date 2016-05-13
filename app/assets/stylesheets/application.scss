@@ -259,6 +259,10 @@ hr {
     background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
+.modal-content {
+  height: 42em;
+}
+
 footer {
     clear: both;
     overflow: hidden;
@@ -266,7 +270,7 @@ footer {
     height: 100px;
     bottom: 0;
     width: 100%;
-    margin-top: 3em;
+    margin-top: 15em;
     background-color: $primary-color;
 }
 
