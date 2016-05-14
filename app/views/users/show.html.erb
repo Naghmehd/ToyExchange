@@ -52,8 +52,14 @@
   </div>
   <hr>
     <% @wanted_toys.each do |t| %>
-      <div class="">
-      <img scr="<%= t.profile_image %>">
-      </div>
+    <div class="col-xs-6 col-sm-4 image-height">
+      <%= image_tag attachment_url(t, :profile_image, :fill, 100, 100, format: "png") %>
+      <p>Brand: <%= t.brand %></p>
+      <p>Name: <%= t.name %></p>
+      <p>category: <%= t.category %></p>
+      <p>Age Group: <%= t.age_group %></p>
+      <p>Description: <%= t.description %></p>
+      <%= link_to  "Send a Message", conversations_path(conversation: { sender_id: current_user.id, recipient_id: t.user.id, toy_id: t.id }), method: :POST, class:'btn btn-default' %>
+    </div>
     <% end %>
 </div>
