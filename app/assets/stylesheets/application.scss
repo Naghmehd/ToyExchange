@@ -176,6 +176,13 @@ a .dropdown-toggle {
     vertical-align: top;
 }
 
+.btn.btn-default.list-button {
+  padding: 1em;
+}
+
+input#toy_profile_image {
+  margin-bottom: 1em;
+}
 .account-row {
   display: inline-block;
 }
@@ -267,7 +274,6 @@ footer {
     clear: both;
     overflow: hidden;
     display: block;
-    height: 100px;
     bottom: 0;
     width: 100%;
     margin-top: 15em;
