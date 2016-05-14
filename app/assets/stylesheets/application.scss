@@ -259,11 +259,8 @@ input#toy_profile_image {
     border-bottom: 1px solid;
 }
 
-hr {
-    border: 0;
-    height: 1px;
-    background: #333;
-    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+.btn-send-message {
+  padding: 0.4em 4em; 
 }
 
 .modal-content {
@@ -275,9 +272,15 @@ footer {
     overflow: hidden;
     display: block;
     bottom: 0;
+    height: 100px;
     width: 100%;
     margin-top: 15em;
     background-color: $primary-color;
+    text-align: center;
+}
+
+#footnotes_holder {
+  margin: 2em;
 }
 
 #fall_footnotes {
