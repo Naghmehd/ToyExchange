@@ -50,7 +50,7 @@ body {
 
 #wrapper {
   min-height: 100%;
-  width: 95%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -161,10 +161,10 @@ color: #468847;
 text-align: left;
 }
 
-.notice.notice-notice.notice-dismissable {
-  background-color: #efefef;
-  margin-bottom: 2em;
-}
+// .notice.notice-notice.notice-dismissable {
+//   background-color: #efefef;
+//   margin-bottom: 2em;
+// }
 
 a .dropdown-toggle {
     color: #c3c3c3;
@@ -183,13 +183,11 @@ a .dropdown-toggle {
 input#toy_profile_image {
   margin-bottom: 1em;
 }
+
 .account-row {
   display: inline-block;
 }
 
-.form-control.search-bar {
-  width: 500px;
-}
 .filter {
   background-color: #f7f7f7;
   border-bottom: 2px solid #f7f7f7;
@@ -279,26 +277,22 @@ footer {
     overflow: hidden;
     display: block;
     bottom: 0;
-    height: 100px;
+    height: 10em;
     width: 100%;
     margin-top: 15em;
     background-color: $primary-color;
     text-align: center;
+    color: white;
+}
+
+.facebook-like a {
+  color: white;
+}
+
+.footer-link a {
+  color: white;
 }
 
 #footnotes_holder {
   margin: 2em;
-}
-
-#fall_footnotes {
-  background-color: $primary-color;
-  color: white;
-}
-
-@media (max-width: 767px) {
-.dropdown.custom:hover .dropdown-menu {
-  visibility: visible;
-  display:block;
-  border-radius:0;
-  }
 }
