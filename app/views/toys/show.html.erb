@@ -2,16 +2,16 @@
   <div class="panel panel-default">
       <div class="panel-heading">
           <h3><%= @toy.name %></h3>
-        </div>
-        <div class="panel-body">
-          <p>Brand: <%= @toy.brand %></p>
-          <p>Category: <%= @toy.category %></p>
-          <p>Condition: <%= @toy.condition %></p>
-          <p>Age Group: <%= @toy.age_group %></p>
-          <p>Description: <%= @toy.description %></p>
+      </div>
+      <div class="panel-body">
+        <p>Brand: <%= @toy.brand %></p>
+        <p>Category: <%= @toy.category %></p>
+        <p>Condition: <%= @toy.condition %></p>
+        <p>Age Group: <%= @toy.age_group %></p>
+        <p>Description: <%= @toy.description %></p>
 
-          <%= attachment_image_tag(@toy, :profile_image, :fill, 100, 100, fallback: "/assets/toy2.png", class:'toy-image') %>
-        </div>
+        <%= attachment_image_tag(@toy, :profile_image, :fill, 100, 100, fallback: "/assets/toy2.png", class:'toy-image') %>
+      </div>
   </div>
   <div class="row">
       <div class="col-xs-12">
