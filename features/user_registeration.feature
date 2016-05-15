@@ -14,4 +14,5 @@ Feature: User Registeration
     And I fill in "Password" with "password" within ".register-box"
     And I fill in "Password confirmation" within ".register-box"
     And I click "Sign up"
-    Then I should see "Account"
+    When I go to the root path
+    Then I should see "Welcome"

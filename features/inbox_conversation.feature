@@ -1,12 +1,6 @@
-Feature: User Autentication
+Feature: Viewing Inbox And Conversations
 
-  Scenario: Existing User Can Visit Login|Register Page
-
-    Given I have an existing account
-    When I go to the sign in path
-    Then I should see "Log in"
-
-  Scenario: Existing Users Can Log In
+  Scenario: Existing Users Can View Inbox
 
     Given I have an existing account
     When I go to the sign in path
@@ -14,4 +8,5 @@ Feature: User Autentication
     And I fill in "Password" with "password" within ".login-box"
     And I click "Log in"
     When I go to the root path
-    Then I should see "Welcome"
+    Then I click "InBox"
+    
