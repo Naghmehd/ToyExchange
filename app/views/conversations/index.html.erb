@@ -9,11 +9,10 @@
     <% @conversations.each do |conversation| %>
       <p class="list-group-item">
        <%= link_to "Conversation about toy", conversation_messages_path(conversation) %>
-         <%= link_to conversation.toy.name, toy_path(conversation.toy) %>.
+        <%= link_to conversation.toy.name, toy_path(conversation.toy) %>.
            You have <%= conversation.messages.count %> message in this conversation for this toy.
-      </p>
-      <%= button_to "Go to the Conversation", conversation_messages_path(conversation), form_class: 'btn-group', class: "btn btn-default", type: "button", :method => :get  %>
-
+        <%= link_to "Go to the Conversation", conversation_messages_path(conversation), class: "btn btn-default" , type: "button", :method => :get  %>
+    </p>
     <% end %>
   </div>
 </div>

@@ -13,7 +13,7 @@
         <%= f.hidden_field :user_id, :value => current_user.id %>
         <%= f.input :body, :as => :text, label: false, placeholder: "Write your message here" %>
       <div>
-        <%= f.button :submit, 'Send', :class=> "btn btn-primary btn-send-message" %>
+        <%= f.button :submit, 'Send', :class=> "btn btn-default btn-send-message" %>
       </div>
     <% end %>
   </div>

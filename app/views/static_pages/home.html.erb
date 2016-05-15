@@ -1,10 +1,12 @@
 <div class="row">
   <div class="page-header">
-    <h1>Welcome to ToyExchange</h1>
+    <% if user_signed_in? %>
+      <h1>Welcome to ToyExchange</h1>
+      <% else %>
+      <h1>Empty your closet of unused toys </h1>
+    <% end %>
   </div>
 </div>
-</br>
-
 <div class="btn-toolbar" role="toolbar" aria-label="...">
   <% if user_signed_in? %>
     <%= button_to 'Inbox', conversations_path, form_class: 'btn-group', class: "btn btn-default", type: "button", :method => :get %>

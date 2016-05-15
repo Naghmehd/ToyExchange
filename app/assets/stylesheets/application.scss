@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6, .btn, .btn-default {
 
 body {
   font-family: Dosis, sans-serif;
-  margin-top: 11em;
+  margin-top: 9em;
   margin-bottom: 11em;
   font-size: 16px;
   color: #333;
@@ -187,6 +187,9 @@ input#toy_profile_image {
   display: inline-block;
 }
 
+.form-control.search-bar {
+  width: 500px;
+}
 .filter {
   background-color: #f7f7f7;
   border-bottom: 2px solid #f7f7f7;
@@ -260,11 +263,15 @@ input#toy_profile_image {
 }
 
 .btn-send-message {
-  padding: 0.4em 4em; 
+  padding: 0.4em 4em;
 }
 
 .modal-content {
   height: 42em;
+}
+
+div.panel.panel-default{
+  margin-top: 2em;
 }
 
 footer {
