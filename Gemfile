@@ -31,11 +31,15 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'simple_form'
-gem 'mail_form'
+
+# Gems for image uploads
 gem "refile", require: "refile/rails"
 gem "refile-mini_magick"
 gem 'refile-postgres', '~> 1.4.0'
 gem 'refile-memory'
+
+#Gems for email
+gem 'mail_form'
 gem 'figaro'
 
 

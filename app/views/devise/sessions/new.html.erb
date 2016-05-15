@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-6 login-box">
           <h2>Log in</h2>
           <%= simple_form_for(resource, as: resource_name, url:  user_session_path) do |f| %>
             <div class="form-inputs">
@@ -14,7 +14,7 @@
           <% end %>
           <%= render "devise/shared/links" %>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-6 register-box">
           <h2>Register</h2>
           <%= simple_form_for(resource, as: resource_name, url: new_user_session_path) do |f| %>
             <%= f.error_notification %>
