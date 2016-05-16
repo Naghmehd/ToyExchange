@@ -1,36 +1,42 @@
-<%= render partial: '/layouts/navbar' %>
-<div class="container">
+
+<div class="panel panel-default">
   <div class="row">
-    <div class="col-xs-6 col-sm-4">
-      <h2>How To</h2>
-      <p>Do you have a closet full of toys that your kids don't play with anymore?<p>
-      <p>Are you tired of spending hundreds of dollars on toys that quickly abandoned?</p>
-      <p>Toy Exchange is a place for moms and dads to find toys in their local community at no cost.
-        <P>List toys you no longer want.</p>
-        <p>Search for toys by catergory, age group and condition.</p>
-        <p>Communicate with other members in your local community if you are interested in a toy.</p>
-        <p>Arrange a pick up.</p>
-      </p>
-    </div>
-    <div class="col-xs-6 col-sm-4">
-      <img src="assets/toy2.png" width="50%">
-    </div>
-  </div>
-    <div class="row">
-      <div class="col-xs-6 col-sm-4" align="left">
-        <h3>Send A message to Us</h3>
-          <%= simple_form_for Contact.new do |f| %>
-            <%= f.input :name, :required => true %>
-            <%= f.input :email, :required => true %>
-            <%= f.input :message, :as => :text, :required => true %>
-            <div class= "hidden">
-              <%= f.input :nickname, :hint => 'Leave this field blank!' %>
-            </div>
-            <div>
-              </br>
-              <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
-            </div>
-          <% end %>
+  <div class="col-xs-6 cols-sm-4">
+
+        <h2 class="panel-heading">How To</h2>
+
+      <div class="panel-body">
+        <p>Do you have a closet full of toys that your kids don't play with anymore?<p>
+        <p>Are you tired of spending hundreds of dollars on toys that quickly abandoned?</p>
+        <p>Toy Exchange is a place for moms and dads to find toys in their local community at no cost.
+          <P>List toys you no longer want.</p>
+          <p>Search for toys by catergory, age group and condition.</p>
+          <p>Communicate with other members in your local community if you are interested in a toy.</p>
+          <p>Arrange a pick up.</p>
+        </p>
       </div>
     </div>
+
+  <div class="col-xs-6 col-sm-4 contact-image">
+    <img src="assets/contactimage.jpg" width="150%">
+  </div>
 </div>
+
+</div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 well contact-box" align="left">
+      <h3>Contact Us</h3>
+        <%= simple_form_for Contact.new do |f| %>
+          <%= f.input :name, :required => true %>
+          <%= f.input :email, :required => true %>
+          <%= f.input :message, :as => :text, :required => true %>
+          <div class= "hidden">
+            <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+          </div>
+          <div>
+            </br>
+            <%= f.button :submit, 'Send', :class=> "btn btn-default" %>
+          </div>
+        <% end %>
+    </div>
+  </div>
