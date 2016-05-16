@@ -33,7 +33,7 @@ class User < ActiveRecord::Base
     where(provider: auth_hash["provider"], uid: auth_hash["uid"]).first_or_initialize do |user|
       user.provider = auth_hash["provider"]
       user.uid = auth_hash["uid"]
-      user.email = auth_hash['info']['email']
+      user.email = auth_hash['email']
       user.username = auth_hash['info']['name']
       user.password = Devise.friendly_token[0,20]
       user.save!
