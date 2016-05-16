@@ -34,7 +34,7 @@
 <div class="row">
   <% @user.toys.each do |t| %>
     <div class="col-xs-12 col-sm-6 col-md-4 image-height">
-      <%= image_tag attachment_url(t, :profile_image, :fill, 100, 100, format: "png") %>
+      <%= image_tag attachment_url(t, :profile_image, :fill, 200, 200, format: "png") %>
       <p>Brand: <%= t.brand %></p>
       <p>Name: <%= t.name %></p>
       <p>category: <%= t.category %></p>
@@ -52,7 +52,7 @@
   </div>
   <% @wanted_toys.each do |t| %>
     <div class="col-xs-12 col-sm-6 col-md-4 image-height">
-      <%= image_tag attachment_url(t, :profile_image, :fill, 100, 100, format: "png") %>
+      <%= image_tag attachment_url(t, :profile_image, :fill, 200, 200, format: "png") %>
       <p>Brand: <%= t.brand %></p>
       <p>Name: <%= t.name %></p>
       <p>category: <%= t.category %></p>
