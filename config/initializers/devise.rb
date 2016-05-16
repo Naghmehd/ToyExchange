@@ -241,8 +241,13 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  config.omniauth :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET'],
-    scope: 'public_profile', info_fields: 'email,name', callback_url: 'http://toyexchange.herokuapp.com/users/auth/facebook/callback'
+  if Rails.env.development?
+    config.omniauth :facebook, ENV['FACEBOOK_KEY_DEV'], ENV['FACEBOOK_SECRET_DEV'],
+      scope: 'public_profile, email', info_fields: 'email, name', callback_url: 'http://localhost:3000/users/auth/facebook/callback'
+  else
+    config.omniauth :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET'],
+      scope: 'public_profile, email', info_fields: 'email, name', callback_url: 'http://toyexchange.herokuapp.com/users/auth/facebook/callback'
+  end
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
