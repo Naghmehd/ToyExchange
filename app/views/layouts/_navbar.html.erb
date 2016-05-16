@@ -1,17 +1,16 @@
-
 <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
+  <div class="container-fluid">
     <div class="navbar-header">
        <%= link_to image_tag("/assets/logopwt.png", class: "logo"), root_path %>
        <%= link_to "ToyExchange", root_path, class: "toyExchange" %>
-       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
          <span class="sr-only">Toggle navigation</span>
          <span class="icon-bar"></span>
          <span class="icon-bar"></span>
          <span class="icon-bar"></span>
        </button>
      </div>
-    <div class='collapse navbar-collapse'>
+    <div  class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav pull-right">
           <li><%= link_to "How To", companies_path %></li>
             <% if signed_in? %>
