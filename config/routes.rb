@@ -21,9 +21,6 @@ Rails.application.routes.draw do
 
   get '/auth/:provider/callback', to: 'sessions#create'
 
-  # authenticated do
-  #    root :to => 'users#show', as: :authenticated
-  #  end
   root :to => 'static_pages#home'
 
 end
