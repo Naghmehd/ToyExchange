@@ -133,8 +133,17 @@ div #navbar {
     color: white;
 }
 
-.hidden { display: none; }
+.hidden {
+  display: none;
+}
 
+#mySignInModal .modal-content {
+  height: 27em;
+}
+
+#mySignUpModal .modal-content {
+  height: 30em;
+}
 /*flash*/
 
 .alert-error {
@@ -221,7 +230,7 @@ input#toy_profile_image {
 }
 
 .contact-image {
-  margin-top: 4em;
+  margin-top: 3em;
 }
 
 .contact-box {
@@ -241,6 +250,10 @@ input#toy_profile_image {
 
 .conversation-lineup a {
   margin-left: 0px;
+}
+
+.go-to-conversation-btn {
+  margin-left: 3em;
 }
 
 .item{
@@ -282,6 +295,7 @@ footer {
 
 .footer-link a {
   color: white;
+  text-decoration: none;
 }
 
 #footnotes_holder {
