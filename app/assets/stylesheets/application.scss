@@ -28,7 +28,7 @@ $yellow: #FFC639;
 
 html {
   position: relative;
-  height: 100%
+  height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6, .btn, .btn-default {
@@ -63,6 +63,7 @@ a.nav-link {
   float: left;
   width:60px;
   height:60px;
+  margin-left: 1em;
 }
 
 a.toyExchange {
@@ -111,6 +112,7 @@ div #navbar {
     }
   }
 }
+
 
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
     background-color: darken($primary-color, 5%);

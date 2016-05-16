@@ -40,3 +40,7 @@
 var store = {
 
 };
+
+$(document).ready (function(){
+  $('.dropdown-toggle').dropdown()
+});
