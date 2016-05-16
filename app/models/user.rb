@@ -21,16 +21,17 @@ class User < ActiveRecord::Base
     sender_conversations | recipient_conversations
   end
 
+  def email_required?
+    super && provider.blank?
+  end
+
+  def password_required?
+    super && provider.blank?
+  end
+
   def self.from_omniauth(auth_hash)
-    puts "*" * 20
-    puts auth_hash.inspect
-    puts "*" * 20
     user = find_or_create_by(uid: auth_hash['uid'], provider: auth_hash['provider'])
-    user.email = auth_hash['info']['email']
     user.username = auth_hash['info']['name']
-    # user.location = auth_hash['info']['location']
-    # user.image_url = auth_hash['info']['image']
-    # user.url = auth_hash['info']['urls'][user.provider.capitalize]
     user.save!
     user
   end
