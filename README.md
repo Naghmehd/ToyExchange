@@ -13,12 +13,17 @@ Welcome to Toy Exchange, a platform for parents to list toys they no longer need
 -Bootstrap for styling and javascript
 -Web hosting by Heroku
 -Refile for image upload
+-Refile Amazon S3
 -Cucumber for model testing
 -PostgreSQL Database
 -Sass
 -React for dynamic item search
 -Bcrypt for password encryption
--Geocoder for distance measurement
+-Device
+-Facebook API
+-Mail_form
+-Figaro
+
 
 More information in the Gemfile
 
@@ -35,5 +40,4 @@ rails s to start server
 -current Trello scrum board
 -wireframes
 
-== Credits and Acknowledgements
--
+[![Code Climate](https://codeclimate.com/repos/573b74cd9adb1227dc00ac63/badges/a2a6a1d5dc1dec887130/gpa.svg)](https://codeclimate.com/repos/573b74cd9adb1227dc00ac63/feed)

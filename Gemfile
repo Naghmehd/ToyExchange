@@ -35,13 +35,12 @@ gem 'simple_form'
 # Gems for image uploads
 gem "refile", require: "refile/rails"
 gem "refile-mini_magick"
-gem 'refile-postgres', '~> 1.4.0'
-gem 'refile-memory'
+gem 'refile-s3'
 
 #Gems for email
 gem 'mail_form'
 gem 'figaro'
-
+gem 'dotenv-rails', require: 'dotenv/rails-now'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -51,8 +50,6 @@ gem 'figaro'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
-gem 'dotenv-rails', require: 'dotenv/rails-now'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

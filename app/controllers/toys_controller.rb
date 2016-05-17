@@ -18,7 +18,11 @@ class ToysController < ApplicationController
   end
 
   def create
-    @toy = current_user.toys.build(toy_params)
+    begin
+      @toy = current_user.toys.build(toy_params)
+    rescue Aws::S3::Errors::PermanentRedirect
+      binding.pry
+    end
     respond_to do |format|
        if @toy.save
          format.html { redirect_to user_path(current_user), notice: 'Toy was successfully created.' }
