@@ -10,23 +10,23 @@ var FilterbarSearch = React.createClass({
     };
   },
 
-  setCondition: function (condition) {
+  setCondition: function (condition, label) {
     this.setState({
-      condition: condition
+      condition: label
     });
     store.filterByCondition(condition);
   },
 
-  setAgeGroup: function (ageGroup) {
+  setAgeGroup: function (ageGroup, label) {
     this.setState({
-      ageGroup: ageGroup
+      ageGroup: label
     });
     store.filterByAgeGroup(ageGroup);
   },
 
-  setCategory: function (category) {
+  setCategory: function (category, label) {
     this.setState({
-      category: category
+      category: label
     });
     store.filterByCategory(category);
   },
@@ -50,10 +50,10 @@ var FilterbarSearch = React.createClass({
                     Condition: {this.state.condition} <b className="caret"></b>
                     </a>
                     <ul className="dropdown-menu" id="FilterContainer">
-                      <li onClick={this.setCondition.bind(this, 'Like New')}><a href="#">Like New</a></li>
-                      <li onClick={this.setCondition.bind(this, 'Good Condition')}><a href="#">Good Condition</a></li>
-                      <li onClick={this.setCondition.bind(this, 'Fair Condition')}><a href="#">Fair Condition</a></li>
-                      <li onClick={this.setCondition.bind(this, 'All')}><a href="#">All</a></li>
+                      <li onClick={this.setCondition.bind(this, 'Like New', 'New')}><a href="#">Like New</a></li>
+                      <li onClick={this.setCondition.bind(this, 'Good Condition', 'Good')}><a href="#">Good</a></li>
+                      <li onClick={this.setCondition.bind(this, 'Fair Condition', 'Fair')}><a href="#">Fair</a></li>
+                      <li onClick={this.setCondition.bind(this, 'All', 'All')}><a href="#">All</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -65,11 +65,11 @@ var FilterbarSearch = React.createClass({
                       Age Group: {this.state.ageGroup} <b className="caret"></b>
                     </a>
                     <ul className="dropdown-menu" id="FilterContainer">
-                      <li onClick={this.setAgeGroup.bind(this, '0-1yr')}><a href="#">0-1yr</a></li>
-                      <li onClick={this.setAgeGroup.bind(this, '1-2yrs')}><a href="#">1-2yrs</a></li>
-                      <li onClick={this.setAgeGroup.bind(this, '2-4yrs')}><a href="#">2-4yrs</a></li>
-                      <li onClick={this.setAgeGroup.bind(this, '4-8yrs')}><a href="#">4-8yrs</a></li>
-                      <li onClick={this.setAgeGroup.bind(this, 'All')}><a href="#">All</a></li>
+                      <li onClick={this.setAgeGroup.bind(this, 0, '0-1yr')}><a href="#">0-1yr</a></li>
+                      <li onClick={this.setAgeGroup.bind(this, 1, '1-2yr')}><a href="#">1-2yrs</a></li>
+                      <li onClick={this.setAgeGroup.bind(this, 2, '2-4yr')}><a href="#">2-4yrs</a></li>
+                      <li onClick={this.setAgeGroup.bind(this, 4, '4-8yr')}><a href="#">4-8yrs</a></li>
+                      <li onClick={this.setAgeGroup.bind(this, 'All', 'All')}><a href="#">All</a></li>
 
                     </ul>
                   </li>
@@ -82,12 +82,12 @@ var FilterbarSearch = React.createClass({
                       Category: {this.state.category} <b className="caret"></b>
                     </a>
                     <ul className="dropdown-menu" id="FilterContainer">
-                      <li onClick={this.setCategory.bind(this, 'Activity & Learning')}><a href="#">Activity & Learning</a></li>
-                      <li onClick={this.setCategory.bind(this, 'Arts & Crafts')}><a href="#">Arts & Crafts</a></li>
-                      <li onClick={this.setCategory.bind(this, 'Baby Toys')}><a href="#">Baby Toys</a></li>
-                      <li onClick={this.setCategory.bind(this, 'Games')}><a href="#">Games</a></li>
-                      <li onClick={this.setCategory.bind(this, 'Dolls')}><a href="#">Dolls</a></li>
-                      <li onClick={this.setCategory.bind(this, 'All')}><a href="#">All</a></li>
+                      <li onClick={this.setCategory.bind(this, 'Activity & Learning', 'Activity & Learning')}><a href="#">Activity & Learning</a></li>
+                      <li onClick={this.setCategory.bind(this, 'Arts & Crafts', 'Arts & Crafts')}><a href="#">Arts & Crafts</a></li>
+                      <li onClick={this.setCategory.bind(this, 'Baby Toys', 'Baby Toys')}><a href="#">Baby Toys</a></li>
+                      <li onClick={this.setCategory.bind(this, 'Games', 'Games')}><a href="#">Games</a></li>
+                      <li onClick={this.setCategory.bind(this, 'Dolls', 'Dolls')}><a href="#">Dolls</a></li>
+                      <li onClick={this.setCategory.bind(this, 'All', 'All')}><a href="#">All</a></li>
                     </ul>
                   </li>
                 </ul>

@@ -46,7 +46,7 @@ var ToySearch = React.createClass ({
       if (ageGroup === 'All') {
         return true;
       }
-      return toy.ageGroup === ageGroup;
+      return toy.age_group === ageGroup;
     });
     this.setState({filterToys: filteredToys});
     store.updateToyCount(filteredToys.length);
@@ -66,9 +66,9 @@ var ToySearch = React.createClass ({
   filterList: function(e){
     var searchReturn = this.state.allToys.filter(function (toy) {
       return (
-              toy.brand.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1 ||
-              toy.description.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1 ||
-              toy.name.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1 );
+        toy.brand.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1 ||
+        toy.description.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1 ||
+        toy.name.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1 );
     }.bind(this));
 
     this.setState({
