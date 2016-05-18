@@ -35,7 +35,7 @@ var ToySearch = React.createClass ({
       if (condition === 'All') {
         return true;
       }
-      return toy.condition === condition;
+      return toy.condition.toLowerCase() === condition.toLowerCase();
     });
     this.setState({filterToys: filteredToys});
     store.updateToyCount(filteredToys.length);
@@ -57,7 +57,7 @@ var ToySearch = React.createClass ({
       if (category === 'All') {
         return true;
       }
-      return toy.category === category;
+      return toy.category.toLowerCase() === category.toLowerCase();
     });
     this.setState({filterToys: filteredToys});
     store.updateToyCount(filteredToys.length);
@@ -68,7 +68,8 @@ var ToySearch = React.createClass ({
       return (
         toy.brand.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1 ||
         toy.description.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1 ||
-        toy.name.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1 );
+        toy.name.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1
+      );
     }.bind(this));
 
     this.setState({
