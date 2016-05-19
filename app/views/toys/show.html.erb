@@ -15,12 +15,14 @@
   </div>
   <div class="row">
       <div class="col-xs-12">
-        <% if current_user.toys.where(id: @toy.id).count > 0  %>
-          <% current_user.toys.each do |toy| %>
-            <% end %>
-            <%= link_to 'Delete', toy_path(@toy), method: :delete, class: 'btn btn-default', data: { confirm: 'Are you sure?' } %>
-        <% else %>
-          <%= link_to  "Send a Message", conversations_path(conversation: { sender_id: current_user.id, recipient_id: @toy.user.id, toy_id: @toy.id }), method: :POST, class:'btn btn-default' %>
+        <% if current_user %>
+          <% if current_user.toys.where(id: @toy.id).count > 0  %>
+            <% current_user.toys.each do |toy| %>
+              <% end %>
+              <%= link_to 'Delete', toy_path(@toy), method: :delete, class: 'btn btn-default', data: { confirm: 'Are you sure?' } %>
+          <% else %>
+            <%= link_to  "Send a Message", conversations_path(conversation: { sender_id: current_user.id, recipient_id: @toy.user.id, toy_id: @toy.id }), method: :POST, class:'btn btn-default' %>
+          <% end %>
         <% end %>
     </div>
   </div>

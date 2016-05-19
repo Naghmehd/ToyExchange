@@ -15,5 +15,4 @@ Feature: User Registeration
     And I fill in "Password" with "password" within "#mySignUpModal"
     And I fill in "Password confirmation" with "password" within "#mySignUpModal"
     And I press "Sign up"
-    Then I should see "Welcome! You have signed up successfully."
-    
+    Then I should see "successfully"

@@ -6,7 +6,7 @@ Welcome to Toy Exchange, a platform for parents to list toys they no longer need
 - _Toy Exchange_ is a website for parents who want to spend less on toys.
 - Users can create an account, list the toys they no longer want and search for toys by category, brand, zip-code and age-group.
 - When they find a toy they like, they can communicate with the Toy Exchanger and arrange for a pick-up.
-- Check out the live site at [link](www.toyexchange.herokuapp.com.)
+- Check out the live site at [link](www.toyexchange.herokuapp.com)
 
 # Libraries, software and other tools used
 - Ruby(2.2.1)
