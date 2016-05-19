@@ -1,13 +1,27 @@
 Given(/^I have an existing account$/) do
-
+  user = User.create!(username: "Test User",
+                      email: "1test@example.com",
+                      password: "password")
 end
 
 Given(/^I am a new user$/) do
+  user = User.create!(username: "Test User2",
+                     email: "2test@example.com",
+                     password: "password",
+                     password_confirmation: "password")
 
+end
+
+When(/^I go to the root path$/) do
+  visit('/')
 end
 
 When(/^I go to the sign in path$/) do
   visit('/users/sign_in')
+end
+
+When(/^I go to the users path$/) do
+  visit('/users')
 end
 
 Then(/^I should see "([^"]*)"$/) do |text|
@@ -27,13 +41,9 @@ When(/^I fill in "([^"]*)" with "([^"]*)" within "([^"]*)"$/) do |field, content
 end
 
 When(/^I click "([^"]*)"$/) do |text|
-  click_button(text)
-end
-
-When(/^I press "([^"]*)"$/) do |text|
   click_link(text)
 end
 
-When(/^I go to the root path$/) do
-  visit('/users/sign_in')
+When(/^I press "([^"]*)"$/) do |text|
+  click_button(text)
 end

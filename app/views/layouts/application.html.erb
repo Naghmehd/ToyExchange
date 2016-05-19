@@ -32,13 +32,6 @@
 
         <%= render partial: '/layouts/navbar' %>
 
-        <!-- <% flash.each do |key, value| %>
-            <div class="notice notice-<%= key %> notice-dismissable">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                <%= value %>
-            </div>
-        <% end %> -->
-
         <% flash.each do |key, value| %>
             <div class="alert alert-<%= key %> alert-dismissable">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>

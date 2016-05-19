@@ -1,18 +1,19 @@
 Feature: User Registeration
 
-  Scenario: New User Can Visit Login|Register Page
+  Scenario: New User Can Visit Home Page
 
     Given I am a new user
-    When I go to the sign in path
+    When I go to the root path
     Then I should see "Register"
 
   Scenario: New Users Can Register
 
     Given I am a new user
-    When I go to the sign in path
-    And I fill in "Email" with "1test@example.com" within ".register-box"
-    And I fill in "Password" with "password" within ".register-box"
-    And I fill in "Password confirmation" within ".register-box"
-    And I click "Sign up"
     When I go to the root path
-    Then I should see "Welcome"
+    And I click "Register"
+    Then I fill in "Email" with "2test@example.com" within "#mySignUpModal"
+    And I fill in "Password" with "password" within "#mySignUpModal"
+    And I fill in "Password confirmation" with "password" within "#mySignUpModal"
+    And I press "Sign up"
+    Then I should see "Welcome! You have signed up successfully."
+    
