@@ -97,9 +97,9 @@ var ToySearch = React.createClass ({
                   <div className="col-xs-12">
                       <img className="filter-image" src={toy.profile_image_url} width={200} height={200} mode='fit' className="img-responsive"  />
                     <p>{toy.name}</p>
-                    <p>{toy.category}</p>
-                    <p>{toy.condition}</p>
-                    <p>{toy.ageGroup}</p>
+                    <p className="upcase">{toy.category}</p>
+                    <p className="upcase">{toy.condition}</p>
+                    <p className="upcase">{toy.ageGroup}</p>
                     <p>{toy.description}</p>
                     <div className="col-xs-12" className="conversation-lineup">
                     <a href={showUrl}>Start a Conversation</a>

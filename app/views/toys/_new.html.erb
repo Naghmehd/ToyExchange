@@ -5,7 +5,7 @@
   <div class="form-inputs">
     <%= f.hidden_field :user_id, :value => current_user.id %>
     <%= f.label :category, required: true %>
-    <p><%=f.select :category,[['Activity & Learning','activity & learning'],['Arts & Crafts','arts & crafts'],['Baby Toys', 'baby toys'],['Dolls','dolls'],['Game', 'game']]%></p>
+    <p><%=f.select :category,[['Activity & Learning','activity & learning'],['Arts & Crafts','arts & crafts'],['Baby Toys', 'baby toys'],['Dolls','dolls'],['Games', 'games']]%></p>
     <%= f.label :condition, require: true %>
     <p><%=f.select :condition,[['Like New','like new'],['Good Condition','good condition'],['Fair Condition', 'fair condition']]%></p>
     <%= f.label :age_group, required: true %>
