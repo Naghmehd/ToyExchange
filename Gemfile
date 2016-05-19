@@ -24,7 +24,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'react-rails', '~> 1.7.0'
 gem "rails-erd"
-gem 'rails-footnotes', '~> 4.0'
 gem 'bootstrap_form'
 gem 'devise'
 gem 'omniauth'

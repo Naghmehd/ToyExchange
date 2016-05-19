@@ -12,6 +12,10 @@ Given(/^I am a new user$/) do
 
 end
 
+Given(/^I am on the rooth path$/) do
+  visit('/')
+end
+
 When(/^I go to the root path$/) do
   visit('/')
 end
