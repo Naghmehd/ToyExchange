@@ -34,5 +34,5 @@ Welcome to Toy Exchange, a platform for parents to list toys they no longer need
 
 # More information
 - Current Trello scrum board [link](https://trello.com/b/a4rL0m36/toyexchange#)
-- Wireframes [link](./doc/doc)
+- Wireframes [link](/doc/doc)
 ![](./erd.png)
