@@ -33,6 +33,6 @@ Welcome to Toy Exchange, a platform for parents to list toys they no longer need
 - rails s to start server
 
 # More information
-- Current Trello scrum board [link](https://trello.com/b/a4rL0m36/toyexchange#).
-- Original UMLs app/doc
+- Current Trello scrum board [link](https://trello.com/b/a4rL0m36/toyexchange#)
+- ![](./erd.png)
 - Wireframes app/doc
