@@ -41,6 +41,9 @@ gem 'mail_form'
 gem 'figaro'
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 
+#Gem for map and distance
+gem 'geocoder'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
