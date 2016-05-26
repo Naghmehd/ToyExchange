@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :zip_code, :latitude, :longitude
+
   geocoded_by :zip_code
   after_validation :geocode, :if => :address_changed?
 
