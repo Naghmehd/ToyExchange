@@ -1,4 +1,8 @@
 class User < ActiveRecord::Base
+  attr_accessible :zip_code, :latitude, :longitude
+  geocoded_by :zip_code
+  after_validation :geocode, :if => :address_changed?
+
   attachment :profile_image
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
