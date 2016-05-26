@@ -1,6 +1,0 @@
-class AddLatitudeAndLongitudeToUser < ActiveRecord::Migration
-  def change
-    add_column :users, :Latitude, :float
-    add_column :users, :longitude, :float
-  end
-end

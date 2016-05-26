@@ -81,6 +81,8 @@ ActiveRecord::Schema.define(version: 20160507023927) do
     t.string   "email",                                   null: false
     t.string   "username"
     t.integer  "zip_code"
+    t.float    "latitude"
+    t.float    "longitude"
     t.string   "encrypted_password",     default: "",     null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
