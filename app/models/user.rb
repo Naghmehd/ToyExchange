@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
   geocoded_by :zip_code
-  after_validation :geocode, :if => :address_changed?
+  after_validation :geocode
 
   attachment :profile_image
   # Include default devise modules. Others available are:

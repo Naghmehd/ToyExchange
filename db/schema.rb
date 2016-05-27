@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(version: 20160507023927) do
     t.string   "picture_url"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.string   "profile_image_id"
+    t.string   "profile_image_id", null: false
     t.integer  "user_id"
   end
 
@@ -79,8 +79,8 @@ ActiveRecord::Schema.define(version: 20160507023927) do
     t.datetime "created_at",                              null: false
     t.datetime "updated_at",                              null: false
     t.string   "email",                                   null: false
-    t.string   "username"
-    t.integer  "zip_code"
+    t.string   "username",                                null: false
+    t.integer  "zip_code",                                null: false
     t.float    "latitude"
     t.float    "longitude"
     t.string   "encrypted_password",     default: "",     null: false
