@@ -219,7 +219,10 @@ CREATE TABLE toys (
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     profile_image_id character varying,
-    user_id integer
+    user_id integer,
+    location character varying,
+    latitude double precision,
+    longitude double precision
 );
 
 
@@ -609,4 +612,8 @@ INSERT INTO schema_migrations (version) VALUES ('20160507023927');
 INSERT INTO schema_migrations (version) VALUES ('20160507221211');
 
 INSERT INTO schema_migrations (version) VALUES ('20160526140714');
+
+INSERT INTO schema_migrations (version) VALUES ('20160607165027');
+
+INSERT INTO schema_migrations (version) VALUES ('20160607171719');
 
