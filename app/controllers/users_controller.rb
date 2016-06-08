@@ -1,13 +1,15 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!
 
+
   def index
-    if params[:search].present?
-    @user = User.near(params[:search], 50, :order => :distance)
+    if User.find(current_user)
+      @locations = Location.near(params[:latitude => @user.latitude, :longitude = @user.longitude], 50, :order => :distance)
     else
-      @user = user.all
+      @locations = Location.all
     end
   end
+
 
   def show
     # @user = User.find(params[:id])
