@@ -97,6 +97,7 @@ ActiveRecord::Schema.define(version: 20160507023927) do
     t.inet     "last_sign_in_ip"
     t.string   "provider",               default: "none", null: false
     t.string   "uid",                    default: "none", null: false
+    t.boolean  "admin",                  default: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", using: :btree

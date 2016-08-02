@@ -268,7 +268,8 @@ CREATE TABLE users (
     provider character varying DEFAULT 'none'::character varying NOT NULL,
     uid character varying DEFAULT 'none'::character varying NOT NULL,
     "Latitude" double precision,
-    longitude double precision
+    longitude double precision,
+    admin boolean DEFAULT false
 );
 
 
@@ -616,4 +617,6 @@ INSERT INTO schema_migrations (version) VALUES ('20160526140714');
 INSERT INTO schema_migrations (version) VALUES ('20160607165027');
 
 INSERT INTO schema_migrations (version) VALUES ('20160607171719');
+
+INSERT INTO schema_migrations (version) VALUES ('20160802160629');
 
