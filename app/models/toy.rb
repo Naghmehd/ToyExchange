@@ -1,4 +1,7 @@
 class Toy < ActiveRecord::Base
+  geocoded_by :zip_code
+  after_validation :geocode
+  
   attachment :profile_image
   belongs_to :user
 
