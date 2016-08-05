@@ -271,7 +271,8 @@ CREATE TABLE users (
     street character varying,
     city character varying,
     address character varying,
-    state character varying
+    state character varying,
+    zip character varying
 );
 
 
@@ -627,4 +628,6 @@ INSERT INTO schema_migrations (version) VALUES ('20160805160027');
 INSERT INTO schema_migrations (version) VALUES ('20160805160100');
 
 INSERT INTO schema_migrations (version) VALUES ('20160805161342');
+
+INSERT INTO schema_migrations (version) VALUES ('20160805184938');
 

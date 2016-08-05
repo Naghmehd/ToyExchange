@@ -3,7 +3,7 @@ class ToysController < ApplicationController
   def index
     @toys = Toy.all.order('created_at DESC')
     if params[:search].present?
-      @toys = toy.near(params[:search], 50, :order => :distance)
+      @toys = User.near(params[:search], 50, :order => :distance)
     else
       @toys = toy.all
     end
@@ -11,6 +11,11 @@ class ToysController < ApplicationController
       format.html { }
       format.json { render json: @toys }
     end
+  end
+
+  def toy_local
+    @toys = User.near(current_user).joins(:toys).flat_map { |x| x.toys }
+
   end
 
   def show

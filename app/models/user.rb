@@ -44,7 +44,7 @@ class User < ActiveRecord::Base
   end
 
   def address
-   [street, city, state, zip_code].compact.join(', ')
+   [street, city, state, zip].compact.join(', ')
   end
 
 end

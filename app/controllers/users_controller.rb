@@ -3,11 +3,7 @@ class UsersController < ApplicationController
 
 
   def index
-    if User.find(current_user)
-      @users = User.near(params[:latitude => @user.latitude, :longitude => @user.longitude], 50, :order => :distance)
-    else
-      @users = User.all
-    end
+    @users = User.all
   end
 
 
