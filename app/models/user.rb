@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 
-  geocoded_by :zip_code
+  geocoded_by :address
   after_validation :geocode
 
   attachment :profile_image
@@ -42,6 +42,10 @@ class User < ActiveRecord::Base
       user.password = Devise.friendly_token[0,20]
       user.save!
     end
+  end
+
+  def address
+   [street, city, state, zip_code].compact.join(', ')
   end
 
 end

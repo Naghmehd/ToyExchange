@@ -2,6 +2,11 @@ class ToysController < ApplicationController
 
   def index
     @toys = Toy.all.order('created_at DESC')
+    if params[:search].present?
+      @toys = toy.near(params[:search], 50, :order => :distance)
+    else
+      @toys = toy.all
+    end
     respond_to do |format|
       format.html { }
       format.json { render json: @toys }
