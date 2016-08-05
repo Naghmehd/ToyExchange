@@ -86,6 +86,10 @@ ActiveRecord::Schema.define(version: 20160507023927) do
     t.integer  "zip_code",                                null: false
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "street"
     t.string   "encrypted_password",     default: "",     null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
