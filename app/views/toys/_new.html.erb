@@ -6,14 +6,14 @@
     <%= f.hidden_field :user_id, :value => current_user.id %>
     <%= f.label :category, required: true %>
     <p><%=f.select :category,[['Activity & Learning','activity & learning'],['Arts & Crafts','arts & crafts'],['Baby Toys', 'baby toys'],['Dolls','dolls'],['Games', 'games']]%></p>
-    <%= f.label :condition, require: true %>
+    <%= f.label :condition, required: true %>
     <p><%=f.select :condition,[['Like New','like new'],['Good Condition','good condition'],['Fair Condition', 'fair condition']]%></p>
     <%= f.label :age_group, required: true %>
     <p><%=f.select :age_group,[['0-1Yr','0-1yr'],['1-2Yrs','1-2yrs'],['2-4Yrs', '2-4yrs'],['4-8Yrs','4-8yrs']]%></p>
     <%= f.input :name, required: true %>
     <%= f.input :brand, autocomplete: "on", required: true %>
-    <%= f.input :description, type: :text, require: true %>
-    <%= f.attachment_field :profile_image %>
+    <%= f.input :description, type: :text, required: true %>
+    <%= f.attachment_field :profile_image, required: true %>
   </div>
   <div class="form-actions">
     <%= f.button :submit, "Submit" %>
