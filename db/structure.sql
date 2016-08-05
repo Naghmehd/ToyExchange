@@ -267,8 +267,6 @@ CREATE TABLE users (
     last_sign_in_ip inet,
     provider character varying DEFAULT 'none'::character varying NOT NULL,
     uid character varying DEFAULT 'none'::character varying NOT NULL,
-    "Latitude" double precision,
-    longitude double precision,
     admin boolean DEFAULT false,
     street character varying,
     city character varying,
@@ -615,8 +613,6 @@ INSERT INTO schema_migrations (version) VALUES ('20160506163801');
 INSERT INTO schema_migrations (version) VALUES ('20160507023927');
 
 INSERT INTO schema_migrations (version) VALUES ('20160507221211');
-
-INSERT INTO schema_migrations (version) VALUES ('20160526140714');
 
 INSERT INTO schema_migrations (version) VALUES ('20160607165027');
 
