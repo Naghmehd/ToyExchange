@@ -269,7 +269,10 @@ CREATE TABLE users (
     uid character varying DEFAULT 'none'::character varying NOT NULL,
     "Latitude" double precision,
     longitude double precision,
-    admin boolean DEFAULT false
+    admin boolean DEFAULT false,
+    street character varying,
+    city character varying,
+    address character varying
 );
 
 
@@ -619,4 +622,10 @@ INSERT INTO schema_migrations (version) VALUES ('20160607165027');
 INSERT INTO schema_migrations (version) VALUES ('20160607171719');
 
 INSERT INTO schema_migrations (version) VALUES ('20160802160629');
+
+INSERT INTO schema_migrations (version) VALUES ('20160805155948');
+
+INSERT INTO schema_migrations (version) VALUES ('20160805160027');
+
+INSERT INTO schema_migrations (version) VALUES ('20160805160100');
 

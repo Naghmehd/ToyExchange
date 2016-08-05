@@ -1,5 +1,4 @@
 class Toy < ActiveRecord::Base
-  
   attachment :profile_image
   belongs_to :user
 
