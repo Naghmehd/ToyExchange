@@ -11,6 +11,7 @@
         <p>Description: <%= @toy.description %></p>
 
         <%= attachment_image_tag(@toy, :profile_image, :fill, 100, 100, fallback: "/assets/toy2.png", class:'toy-image') %>
+        <%= "is #{user.distance_to(params[:city_search]).round(2)} miles away." %>
       </div>
   </div>
   <div class="row">

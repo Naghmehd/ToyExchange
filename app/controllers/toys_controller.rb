@@ -84,6 +84,6 @@ private
   end
 
   def toy_params
-    params.require(:toy).permit(:name, :brand, :category, :description, :condition, :age_group, :picture_url, :profile_image)
+    params.require(:toy).permit(:user_id, :name, :brand, :category, :description, :condition, :age_group, :picture_url, :profile_image)
   end
 end

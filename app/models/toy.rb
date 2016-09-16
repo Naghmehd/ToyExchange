@@ -14,4 +14,8 @@ class Toy < ActiveRecord::Base
   def as_json(_)
     super(methods: [:profile_image_url])
   end
+
+  def toy_distance
+    Toy.near(current_user)
+  end
 end
