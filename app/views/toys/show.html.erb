@@ -4,14 +4,13 @@
           <h3><%= @toy.name %></h3>
       </div>
       <div class="panel-body">
-        <p>Brand: <%= @toy.brand %></p>
-        <p>Category: <%= @toy.category %></p>
-        <p>Condition: <%= @toy.condition %></p>
-        <p>Age Group: <%= @toy.age_group %></p>
+        <p>Brand:       <%= @toy.brand %></p>
+        <p>Category:    <%= @toy.category %></p>
+        <p>Condition:   <%= @toy.condition %></p>
+        <p>Age Group:   <%= @toy.age_group %></p>
         <p>Description: <%= @toy.description %></p>
-
         <%= attachment_image_tag(@toy, :profile_image, :fill, 100, 100, fallback: "/assets/toy2.png", class:'toy-image') %>
-        <%= "is #{user.distance_to(params[:city_search]).round(2)} miles away." %>
+
       </div>
   </div>
   <div class="row">
@@ -22,6 +21,7 @@
               <% end %>
               <%= link_to 'Delete', toy_path(@toy), method: :delete, class: 'btn btn-default', data: { confirm: 'Are you sure?' } %>
           <% else %>
+            <p>Toy Location: You are <%= @toy.distance_to(current_user) %> miles away!</p>
             <%= link_to  "Send a Message", conversations_path(conversation: { sender_id: current_user.id, recipient_id: @toy.user.id, toy_id: @toy.id }), method: :POST, class:'btn btn-default' %>
           <% end %>
         <% end %>
