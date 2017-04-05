@@ -35,11 +35,12 @@
   <% @user.toys.each do |t| %>
     <div class="col-xs-12 col-sm-6 col-md-4 image-height">
       <%= image_tag attachment_url(t, :profile_image, :fill, 200, 200, format: "png") %>
-      <p>Brand: <%= t.brand %></p>
-      <p>Name: <%= t.name %></p>
-      <p>category: <%= t.category %></p>
-      <p>Age Group: <%= t.age_group %></p>
+      <p>Brand:       <%= t.brand %></p>
+      <p>Name:        <%= t.name %></p>
+      <p>Category:    <%= t.category %></p>
+      <p>Age Group:   <%= t.age_group %></p>
       <p>Description: <%= t.description %></p>
+
     <%= link_to 'Delete', toy_path(t.id), method: :delete, class: 'btn btn-default', data: { confirm: 'Are you sure?' } %>
     </div>
   <% end %>
