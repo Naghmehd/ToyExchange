@@ -5,7 +5,7 @@ class ToysController < ApplicationController
     if params[:search].present?
       @toys = User.near(params[:search], 50, :order => :distance)
     else
-      @toys = toy.all
+      @toys = Toy.all
     end
     respond_to do |format|
       format.html { }
@@ -13,10 +13,9 @@ class ToysController < ApplicationController
     end
   end
 
-  def toy_local
-    @toys = User.near(current_user).joins(:toys).flat_map { |x| x.toys }
-
-  end
+  # def toy_local
+  #   @toys = User.near(current_user).joins(:toys).flat_map { |x| x.toys }
+  # end
 
   def show
     @toy = get_toy
