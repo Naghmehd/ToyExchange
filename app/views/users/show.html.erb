@@ -40,7 +40,7 @@
       <p>Category:    <%= t.category %></p>
       <p>Age Group:   <%= t.age_group %></p>
       <p>Description: <%= t.description %></p>
-
+    <%= link_to 'Edit',   edit_toy_path(t.id), method: :get, class: 'btn btn-default' %>
     <%= link_to 'Delete', toy_path(t.id), method: :delete, class: 'btn btn-default', data: { confirm: 'Are you sure?' } %>
     </div>
   <% end %>

@@ -19,6 +19,7 @@
           <% if current_user.toys.where(id: @toy.id).count > 0  %>
             <% current_user.toys.each do |toy| %>
               <% end %>
+              <%= link_to 'Edit',   edit_toy_path(@toy.id), method: :get, class: 'btn btn-default' %>
               <%= link_to 'Delete', toy_path(@toy), method: :delete, class: 'btn btn-default', data: { confirm: 'Are you sure?' } %>
           <% else %>
             <p>Toy Location: You are <%= @toy.distance_to(current_user) %> miles away!</p>
