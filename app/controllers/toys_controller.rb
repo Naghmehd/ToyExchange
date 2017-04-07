@@ -5,7 +5,7 @@ class ToysController < ApplicationController
     if params[:search].present?
       @toys = User.near(params[:search], 50, :order => :distance)
     else
-      @toys = Toy.all
+      @toys = Toy.all.where("id != ?", current_user.id)
     end
     respond_to do |format|
       format.html { }
