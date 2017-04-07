@@ -51,8 +51,8 @@ class ToysController < ApplicationController
   def update
     @toy = get_toy
 
-    if @toy.update(toy_params)
-      redirect_to @toy_path
+    if @toy.update_attributes(toy_params)
+      redirect_to toy_path
     else
       render :edit
     end
