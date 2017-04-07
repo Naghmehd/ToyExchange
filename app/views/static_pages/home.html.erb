@@ -1,7 +1,7 @@
 <div class="row">
   <div class="page-header">
     <% if user_signed_in? %>
-      <h1>Welcome to ToyExchange</h1>
+      <h1>Welcome to ToyExchange <%= current_user.username %></h1>
       <% else %>
       <h1>Empty your closet of used toys </h1>
     <% end %>
